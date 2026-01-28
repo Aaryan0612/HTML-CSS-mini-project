@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Logo Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-space-black: #0a0a0a;
+            --electric-cyan: #00d4ff;
+            --titanium-gray: #2a2a2a;
+            --pure-white: #ffffff;
+            --font-primary: 'Orbitron', sans-serif;
+            --font-secondary: 'IBM Plex Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            background: var(--deep-space-black);
+            color: var(--pure-white);
+            padding: 4rem 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 4rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--titanium-gray);
+            border-radius: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--electric-cyan);
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .logo-card {
+            padding: 2rem;
+            background: var(--deep-space-black);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo-card h3 {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--electric-cyan);
+        }
+
+        /* Logo Variations */
+
+        /* 1. CSS Symbol Logo */
+        .logo-v1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-family: var(--font-primary);
+            text-decoration: none;
+            color: var(--pure-white);
+            padding: 1rem;
+        }
+
+        .logo-v1 .logo-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            line-height: 1;
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        .logo-v1 .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .logo-v1:hover .logo-icon {
+            transform: rotate(180deg);
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
+            }
+        }
+
+        /* 2. SVG Logo */
+        .logo-v2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--pure-white);
+            padding: 1rem;
+        }
+
+        .logo-v2 .logo-svg {
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .logo-v2:hover .logo-svg {
+            transform: rotate(180deg);
+        }
+
+        .logo-v2 .logo-text {
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        /* 3. Minimal Icon */
+        .logo-v3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .logo-v3 .icon-only {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
+            }
+            50% {
+                transform: scale(1.05);
+                filter: drop-shadow(0 0 20px rgba(0, 212, 255, 1));
+            }
+        }
+
+        /* 4. With Tagline */
+        .logo-v4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+
+        .logo-v4 .main-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-v4 .logo-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        .logo-v4 .logo-text {
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--pure-white);
+        }
+
+        .logo-v4 .tagline {
+            font-family: var(--font-secondary);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.05em;
+        }
+
+        /* 5. Outlined Version */
+        .logo-v5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+
+        .logo-v5 .logo-icon {
+            font-size: 2.5rem;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--electric-cyan);
+            font-weight: 900;
+            animation: neonPulse 2s ease-in-out infinite;
+        }
+
+        .logo-v5 .logo-text {
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--pure-white);
+        }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px var(--electric-cyan));
+            }
+            50% {
+                filter: drop-shadow(0 0 25px var(--electric-cyan));
+            }
+        }
+
+        /* 6. Animated 3D */
+        .logo-v6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            perspective: 1000px;
+        }
+
+        .logo-v6 .logo-3d {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            animation: rotate3d 8s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .logo-v6 .logo-text {
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--pure-white);
+        }
+
+        @keyframes rotate3d {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        /* Color Variations Section */
+        .color-demo {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .color-variant {
+            padding: 2rem;
+            border-radius: 8px;
+            min-width: 250px;
+        }
+
+        .dark-bg {
+            background: var(--deep-space-black);
+        }
+
+        .light-bg {
+            background: #f5f5f5;
+        }
+
+        .light-bg .logo-v1,
+        .light-bg .logo-text {
+            color: var(--deep-space-black);
+        }
+
+        /* Usage Examples */
+        .usage-example {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--deep-space-black);
+            border-radius: 8px;
+            border-left: 4px solid var(--electric-cyan);
+        }
+
+        .usage-title {
+            font-family: var(--font-primary);
+            color: var(--electric-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #00ff88;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--titanium-gray);
+            border-radius: 12px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: var(--deep-space-black);
+            font-family: var(--font-primary);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NEXUS Brand Identity</h1>
+        <p class="subtitle">Logo Variations & Usage Guidelines</p>
+
+        <!-- Logo Variations -->
+        <div class="section">
+            <h2 class="section-title">Logo Variations</h2>
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <h3>Primary Logo (CSS)</h3>
+                    <div class="logo-v1">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <h3>SVG Logo</h3>
+                    <div class="logo-v2">
+                        <svg class="logo-svg" viewBox="0 0 50 50" width="40" height="40">
+                            <defs>
+                                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00d4ff" />
+                                    <stop offset="100%" style="stop-color:#0099cc" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 25 5 L 45 25 L 25 45 L 5 25 Z" fill="url(#g1)" stroke="#00d4ff" stroke-width="1"/>
+                            <path d="M 25 15 L 35 25 L 25 35 L 15 25 Z" fill="#0a0a0a" stroke="#00d4ff" stroke-width="0.5"/>
+                            <circle cx="25" cy="25" r="2" fill="#00d4ff"/>
+                        </svg>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <h3>Icon Only (Mobile)</h3>
+                    <div class="logo-v3">
+                        <span class="icon-only">◆</span>
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <h3>With Tagline</h3>
+                    <div class="logo-v4">
+                        <div class="main-logo">
+                            <span class="logo-icon">◆</span>
+                            <span class="logo-text">NEXUS</span>
+                        </div>
+                        <span class="tagline">Your Life. Quantified.</span>
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <h3>Outlined (Neon)</h3>
+                    <div class="logo-v5">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                </div>
+
+                <div class="logo-card">
+                    <h3>3D Animated</h3>
+                    <div class="logo-v6">
+                        <span class="logo-3d">◆</span>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Variations -->
+        <div class="section">
+            <h2 class="section-title">Color Variations</h2>
+            <div class="color-demo">
+                <div class="color-variant dark-bg">
+                    <div class="logo-v1">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">On Dark Background</p>
+                </div>
+
+                <div class="color-variant light-bg">
+                    <div class="logo-v1">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">NEXUS</span>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #0a0a0a;">On Light Background</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Examples -->
+        <div class="section">
+            <h2 class="section-title">Implementation Code</h2>
+            
+            <div class="usage-example">
+                <h4 class="usage-title">HTML Structure</h4>
+                <code>&lt;div class="logo"&gt;
+    &lt;span class="logo-icon"&gt;◆&lt;/span&gt;
+    &lt;span class="logo-text"&gt;NEXUS&lt;/span&gt;
+&lt;/div&gt;</code>
+            </div>
+
+            <div class="usage-example">
+                <h4 class="usage-title">CSS Styling</h4>
+                <code>.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.logo-icon {
+    font-size: 1.75rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}</code>
+            </div>
+
+            <div class="usage-example">
+                <h4 class="usage-title">Hover Animation</h4>
+                <code>.logo:hover .logo-icon {
+    transform: rotate(180deg);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}</code>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h2 class="section-title">Ready to Use</h2>
+            <p style="margin-bottom: 2rem;">Your logo files are ready! Use the CSS version for best performance or the SVG for maximum quality.</p>
+            <a href="#" class="btn-download">Copy CSS Code</a>
+            <a href="#" class="btn-download">Download SVG</a>
+        </div>
+    </div>
+</body>
+</html>

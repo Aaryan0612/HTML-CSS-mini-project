@@ -1,0 +1,121 @@
+/* ----------------------------------------------------- */
+/* BASE RESET                                            */
+/* ----------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    /* Base for rem */
+}
+
+body {
+    background-color: var(--deep-space-black);
+    color: var(--soft-white);
+    font-family: var(--font-body);
+    font-weight: var(--weight-regular);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------------------------------- */
+/* TYPOGRAPHY                                            */
+/* ----------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--pure-white);
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: var(--text-h1);
+    font-weight: var(--weight-black);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--text-h2);
+    font-weight: var(--weight-bold);
+}
+
+h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-bold);
+}
+
+p {
+    margin-bottom: var(--space-sm);
+    max-width: 65ch;
+    /* Optimal reading length */
+}
+
+a {
+    color: var(--electric-cyan);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ----------------------------------------------------- */
+/* UTILITIES                                             */
+/* ----------------------------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+}
+
+.center-text {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--deep-space-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--titanium-gray);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--electric-cyan);
+}
