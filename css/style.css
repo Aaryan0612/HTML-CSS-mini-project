@@ -8,9 +8,12 @@ body {
     background-color: var(--color-bg-body);
     color: var(--color-text-primary);
     font-size: var(--text-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
+/* --- TYPOGRAPHY --- */
 h1,
 h2,
 h3,
@@ -18,47 +21,68 @@ h4,
 h5,
 h6 {
     font-weight: 600;
-    letter-spacing: -0.015em;
-    color: var(--color-text-primary);
-}
-
-h1 {
-    font-size: var(--text-h1);
-    line-height: 1.1;
-}
-
-h2 {
-    font-size: var(--text-h2);
-    line-height: 1.2;
-    margin-bottom: var(--space-3);
-}
-
-h3 {
-    font-size: var(--text-h3);
-    line-height: 1.3;
-    margin-bottom: var(--space-2);
-}
-
-p {
-    max-width: var(--measure);
-    margin-bottom: var(--space-3);
-    color: var(--color-text-secondary);
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+    /* Apple Black */
 }
 
 /* --- UTILITIES --- */
 .container {
-    width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-4);
 }
 
-section {
-    padding: var(--section-pad) 0;
-    position: relative;
+.text-center {
+    text-align: center;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 999px;
+    /* Pill shape */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    border: none;
+}
+
+.btn-pill {
+    background-color: #0071e3;
+    /* Apple Blue */
+    color: white;
+}
+
+.btn-pill:hover {
+    background-color: #0077ed;
+    transform: scale(1.02);
+}
+
+.btn-pill-small {
+    padding: 6px 14px;
+    font-size: 12px;
+    min-width: 60px;
+}
+
+.link-arrow {
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.link-arrow:hover {
+    text-decoration: underline;
 }
 
 /* --- NAVIGATION --- */
+/* --- NAVIGATION EXPANDED (Mega Menu) --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -66,14 +90,14 @@ section {
     width: 100%;
     height: var(--nav-height);
     z-index: 1000;
-    background-color: rgba(251, 251, 253, 0);
-    transition: background-color var(--duration-std) ease, backdrop-filter var(--duration-std) ease;
-    border-bottom: 1px solid transparent;
+    background-color: rgba(251, 251, 253, 0.85);
+    /* Slightly more opaque base */
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    background-color: rgba(251, 251, 253, 0.8);
-    backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -89,306 +113,229 @@ section {
     font-size: 19px;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
+    text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     gap: var(--space-4);
+    height: 100%;
+    /* Important for hover target */
+    align-items: center;
 }
 
-.nav-links a {
+.nav-item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
     font-size: 12px;
     color: var(--color-text-primary);
     opacity: 0.8;
     transition: opacity 0.2s;
     font-weight: 400;
-}
-
-.nav-links a:hover {
-    opacity: 1;
-}
-
-/* --- BUTTONS --- */
-.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 980px;
-    font-size: var(--text-small);
-    font-weight: 500;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
-    border: none;
     cursor: pointer;
     text-decoration: none;
 }
 
-.btn-primary {
-    background-color: var(--color-accent);
-    color: white;
+.nav-link:hover {
+    opacity: 1;
 }
 
-.btn-pill {
-    background-color: var(--color-accent);
-    color: white;
-    min-width: 60px;
-    font-size: 13px;
-    padding: 6px 14px;
-}
-
-.btn:hover {
-    transform: scale(1.04);
-}
-
-/* --- STORE SHELF UTILITIES (New) --- */
-.shelf-container {
-    display: flex;
-    gap: var(--space-3);
-    overflow-x: auto;
-    padding: 40px var(--space-3);
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin: 0 calc(-1 * var(--space-3));
-}
-
-.shelf-container::-webkit-scrollbar {
-    display: none;
-}
-
-.shelf-item {
-    scroll-snap-align: center;
-    flex: 0 0 85vw;
-}
-
-@media (min-width: 768px) {
-    .shelf-item {
-        flex: 0 0 320px;
-    }
-}
-
-/* --- STORE CARD DESIGN (New) --- */
-.store-card {
-    background-color: white;
-    border-radius: var(--radius-l);
-    padding: 32px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: transform 0.4s var(--ease-spring), box-shadow 0.4s ease;
-    cursor: pointer;
-}
-
-.store-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    z-index: 10;
-}
-
-.store-card-header {
-    z-index: 2;
-}
-
-.store-card h3 {
-    font-size: 28px;
-    margin-bottom: 4px;
-}
-
-.store-card p {
-    color: var(--color-text-secondary);
-    font-size: 15px;
-}
-
-.store-card-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: auto;
-    max-height: 220px;
-    object-fit: contain;
-    transition: transform 0.4s ease;
-}
-
-.store-card:hover .store-card-image {
-    transform: translate(-50%, -54%) scale(1.05);
-    /* Slight lift */
-}
-
-.store-card-actions {
-    margin-top: auto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* --- EXPERIENCE GRID (Index Page New) --- */
-.experience-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-    margin-top: 40px;
-}
-
-@media (min-width: 768px) {
-    .experience-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.exp-card {
-    background-color: white;
-    border-radius: var(--radius-l);
-    overflow: hidden;
-    position: relative;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-}
-
-.exp-card-content {
-    padding: 40px 32px;
-    z-index: 2;
-}
-
-.exp-card-bg {
-    position: absolute;
-    top: 0;
+.nav-dropdown {
+    position: fixed;
+    top: var(--nav-height);
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.exp-card:hover .exp-card-bg {
-    transform: scale(1.03);
-}
-
-.exp-card.large {
-    grid-column: 1 / -1;
-    /* Full width */
-    height: 600px;
-    justify-content: flex-end;
-    color: white;
-    /* Often lifestyle shots need white text */
-}
-
-.exp-card.white-text h3,
-.exp-card.white-text p {
-    color: white;
-}
-
-/* --- DETAIL PAGE UTILS --- */
-.detail-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 900px) {
-    .detail-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .sticky-side {
-        position: sticky;
-        top: var(--nav-height);
-        height: calc(100vh - var(--nav-height));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #F5F5F7;
-    }
-}
-
-.scroll-side {
-    padding: var(--section-pad) var(--space-4);
-    background-color: white;
-    min-height: 100vh;
-}
-
-.spec-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 24px;
-}
-
-.spec-table tr {
+    background-color: #fff;
     border-bottom: 1px solid var(--color-border);
+    padding: 40px 0 60px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.spec-table th,
-.spec-table td {
-    text-align: left;
-    padding: 16px 0;
-    font-size: 14px;
+.nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.spec-table th {
-    color: var(--color-text-secondary);
+.dropdown-grid {
+    display: flex;
+    gap: 100px;
+    max-width: var(--container-width);
+    width: 100%;
+    padding: 0 var(--space-3);
+}
+
+.dropdown-col h4 {
+    font-size: 12px;
+    color: #86868b;
+    margin-bottom: 16px;
+    text-transform: normal;
+    font-weight: 400;
+}
+
+.dropdown-col ul {
+    list-style: none;
+}
+
+.dropdown-col li {
+    margin-bottom: 10px;
+}
+
+.dropdown-col a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.dropdown-col a:hover {
+    color: #000;
+}
+
+.dropdown-col.small-text a {
+    font-size: 13px;
     font-weight: 500;
-    width: 40%;
 }
 
-.spec-table td {
-    color: var(--color-text-primary);
+/* --- APPLE SPECIFIC AUDIO STYLES --- */
+.apple-section {
+    padding: 120px 0;
+    overflow: hidden;
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: var(--color-bg-body);
-    padding: var(--section-pad) 0;
-    border-top: 1px solid var(--color-border);
-    font-size: var(--text-caption);
-    color: var(--color-text-secondary);
-    margin-top: var(--section-pad);
+.bg-apple-gray {
+    background-color: #F5F5F7;
 }
 
-/* --- CART/SUPPORT UTILS --- */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
+.apple-hero-text {
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
     margin-bottom: 24px;
 }
 
-.form-control {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
+.apple-subhead {
+    font-size: 28px;
+    font-weight: 500;
+    color: #1d1d1f;
+    margin-bottom: 40px;
 }
 
-.cart-layout {
+.apple-compare-grid {
     display: grid;
-    gap: var(--space-6);
-    margin-top: var(--space-6);
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 Products */
+    gap: 40px;
+    text-align: center;
+    border-top: 1px solid #d2d2d7;
+    padding-top: 60px;
 }
 
-@media(min-width: 900px) {
-    .cart-layout {
-        grid-template-columns: 2fr 1fr;
-    }
-}
-
-.cart-item {
-    background: white;
-    padding: 24px;
-    border-radius: 14px;
-    margin-bottom: 16px;
+.apple-compare-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.cart-image {
-    width: 80px;
-    margin-right: 24px;
+.compare-img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 30px;
 }
 
-.cart-summary {
-    background: white;
-    padding: 32px;
-    border-radius: 28px;
+.compare-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
+
+.compare-desc {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    max-width: 200px;
+}
+
+.compare-price {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* --- BENTO CARD RE-DO (Light Gray) --- */
+.bento-grid-apple {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.bento-card-light {
+    background-color: #F5F5F7;
+    border-radius: 28px;
+    padding: 30px;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bento-card-light:hover {
+    transform: scale(1.02);
+}
+
+.bento-text-top {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.bento-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6e6e73;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.bento-head {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1d1d1f;
+    line-height: 1.1;
+    max-width: 300px;
+}
+
+.bento-visual-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- FOOTER (Simplified) --- */
+footer {
+    background-color: #f5f5f7;
+    padding: 60px 0;
+    font-size: 12px;
+    color: #86868b;
+}
+
+/* Keep previous cart table / support styles if needed, but this sheet overrides core */
