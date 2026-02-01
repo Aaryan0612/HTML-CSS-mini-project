@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS | Watches</title>
+    <title>Shop NEXUS | The Collection</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,64 +27,81 @@
     </nav>
 
     <main class="padding-top-nav">
-        <!-- Sticky Sub-Nav -->
-        <header class="sticky-filter">
+        <section class="store-shelf">
             <div class="container">
-                <nav class="filter-list">
-                    <a href="#" class="filter-link active">All Models</a>
-                    <a href="#" class="filter-link">Sport Series</a>
-                    <a href="#" class="filter-link">Leather Collection</a>
-                    <a href="#" class="filter-link">Titanium Edition</a>
-                </nav>
-            </div>
-        </header>
+                <!-- Store Headline -->
+                <div style="margin-top: 48px; margin-bottom: 40px;">
+                    <h1 style="font-size: 56px; margin-bottom: 8px;">Shop NEXUS Watch.</h1>
+                    <p style="font-size: 28px; color: var(--color-text-secondary); font-weight: 500;">
+                        All models. <span style="color: #D2D2D7;">Take your pick.</span>
+                    </p>
+                </div>
 
-        <section class="listing">
-            <div class="container">
-                <h1 style="text-align: center; margin-bottom: 64px; font-size: 48px;">Which NEXUS is right for you?</h1>
+                <!-- HORIZONTAL SCROLL SHELF -->
+                <div class="shelf-container">
 
-                <div class="product-grid">
                     <!-- Card 1: Sport Black -->
-                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
-                        <figure>
-                            <img src="images/products/product_sport_black_1769971143091.png" alt="NEXUS Sport Black"
-                                class="product-image">
-                        </figure>
-                        <h3>NEXUS Sport.</h3>
-                        <p class="price">From $399</p>
-                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
-                            The essential companion for your daily runs.
-                        </p>
-                        <div class="card-cta">Buy ></div>
-                    </article>
+                    <div class="shelf-item">
+                        <article class="store-card" onclick="window.location.href='watch-detail.html'">
+                            <div class="store-card-header">
+                                <h3>NEXUS Sport</h3>
+                                <p>Series 7 • Aluminum</p>
+                            </div>
+                            <img src="images/products/product_sport_black_1769971143091.png" alt="Sport Black"
+                                class="store-card-image">
+                            <div class="store-card-actions">
+                                <span class="btn btn-pill">Buy</span>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!-- Card 2: Leather Brown -->
-                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
-                        <figure>
-                            <img src="images/products/product_leather_brown_1769971158203.png"
-                                alt="NEXUS Leather Edition" class="product-image">
-                        </figure>
-                        <h3>NEXUS Heritage.</h3>
-                        <p class="price">From $499</p>
-                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
-                            Classic leather craftsmanship met with modern tech.
-                        </p>
-                        <div class="card-cta">Buy ></div>
-                    </article>
+                    <!-- Card 2: Leather Brown (Heritage) -->
+                    <div class="shelf-item">
+                        <article class="store-card" onclick="window.location.href='watch-detail.html'">
+                            <div class="store-card-header">
+                                <h3>NEXUS Heritage</h3>
+                                <p>SE • Leather</p>
+                            </div>
+                            <img src="images/products/product_leather_brown_1769971158203.png" alt="Leather Brown"
+                                class="store-card-image">
+                            <div class="store-card-actions">
+                                <span class="btn btn-pill">Buy</span>
+                            </div>
+                        </article>
+                    </div>
 
-                    <!-- Card 3: Steel Silver -->
-                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
-                        <figure>
-                            <img src="images/products/product_steel_silver_1769971174728.png" alt="NEXUS Steel"
-                                class="product-image">
-                        </figure>
-                        <h3>NEXUS Steel.</h3>
-                        <p class="price">From $699</p>
-                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
-                            Polished stainless steel link bracelet.
-                        </p>
-                        <div class="card-cta">Buy ></div>
-                    </article>
+                    <!-- Card 3: Steel Silver (Ultra) -->
+                    <div class="shelf-item">
+                        <article class="store-card" onclick="window.location.href='watch-detail.html'">
+                            <div class="store-card-header">
+                                <h3>NEXUS Ultra</h3>
+                                <p>Pro • Titanium</p>
+                            </div>
+                            <img src="images/products/product_steel_silver_1769971174728.png" alt="Steel Silver"
+                                class="store-card-image">
+                            <div class="store-card-actions">
+                                <span class="btn btn-pill">Buy</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 4: Sport Loop (New Item for depth) -->
+                    <div class="shelf-item">
+                        <article class="store-card"
+                            style="justify-content: center; align-items: center; text-align: center;">
+                            <h3 style="font-size: 21px; margin-bottom: 8px;">Explore all<br>accessories.</h3>
+                            <div style="margin-top: 24px; opacity: 0.5;">
+                                <!-- Simple graphic placeholder using CSS circles if image fails -->
+                                <div
+                                    style="width: 40px; height: 40px; background: #eee; border-radius: 50%; display: inline-block;">
+                                </div>
+                                <div
+                                    style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: inline-block; margin-left: -10px;">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -97,7 +114,6 @@
     </footer>
 
     <script src="js/app.js"></script>
-    <!-- Simple JS to highlight active header on scroll if we wanted, but sticking to basics -->
 </body>
 
 </html>

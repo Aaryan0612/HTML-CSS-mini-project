@@ -14,11 +14,10 @@
 
 <body>
 
-    <!-- NAVIGATION (Fixed, Z-Index 1000) -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="index.html" class="brand">NEXUS</a>
-
             <div class="nav-links">
                 <a href="watches.html">Watches</a>
                 <a href="watch-detail.html">Features</a>
@@ -38,58 +37,66 @@
                     style="margin: 0 auto 32px auto; font-size: 24px; color: var(--color-text-secondary); max-width: 40ch;">
                     The new NEXUS Series 7. Engineered for the<br>academic athlete.
                 </p>
-                <div class="cta-group">
-                    <a href="watches.html" class="btn btn-primary">Buy</a>
-                    <a href="watch-detail.html" class="btn"
-                        style="color: var(--color-accent); background: transparent;">Learn more ></a>
+                <div style="margin-bottom: 40px;">
+                    <a href="watches.html" class="btn btn-pill">Buy</a>
+                    <a href="watch-detail.html"
+                        style="margin-left: 20px; color: var(--color-accent); font-size: 14px;">Learn more ></a>
                 </div>
 
                 <div class="hero-image-wrapper">
-                    <!-- High Res Generated Asset -->
                     <img src="images/hero/watch-hero.png" alt="NEXUS Series 7 Titanium Smartwatch">
                 </div>
             </div>
         </section>
 
-        <!-- BENTO GRID -->
-        <section class="features" style="background-color: #FAFAFC;">
+        <!-- THE NEXUS EXPERIENCE (New Grid) -->
+        <section class="experience" style="background-color: #FAFAFC;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 64px;">
-                    Everything you need. <br>
-                    <span style="color: var(--color-text-secondary); opacity: 0.7;">Nothing you don't.</span>
-                </h2>
+                <p style="font-size: 24px; font-weight: 600; color: #86868B; margin-bottom: 8px;">The NEXUS Experience.
+                </p>
+                <h2 style="font-size: 48px; max-width: 20ch; margin-bottom: 48px;">Designed to connect with everything
+                    you make.</h2>
 
-                <div class="bento-grid">
-                    <!-- Feature 1: Titanium (Dark Mode Card) -->
-                    <article class="bento-card dark">
-                        <!-- Background Texture -->
-                        <img src="images/hero/titanium-texture.png" alt="" class="bento-bg">
-                        <div style="position: relative; z-index: 2;">
+                <div class="experience-layout">
+
+                    <!-- Card 1: HEALTH (Heart Rate) -->
+                    <article class="exp-card">
+                        <div class="exp-card-content">
                             <p
-                                style="color: #86868b; font-weight: 600; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px;">
-                                Materials</p>
-                            <h3 style="font-size: 32px; margin-bottom: 8px;">Aerospace Titanium.</h3>
-                            <p style="color: #cccccc; font-size: 17px; max-width: 30ch;">
-                                Lighter than steel. Harder than aluminum. Designed to endure.
-                            </p>
+                                style="font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">
+                                Wellness</p>
+                            <h3 style="font-size: 32px;">The ultimate device for a healthy life.</h3>
+                        </div>
+                        <div
+                            style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: black; margin: 24px; border-radius: 20px; overflow: hidden;">
+                            <!-- UI Screen -->
+                            <img src="images/hero/heart-rate.png" alt="Heart Rate UI"
+                                style="width: 100%; height: auto; opacity: 0.9;">
                         </div>
                     </article>
 
-                    <!-- Feature 2: Battery (Light Mode Card) -->
-                    <article class="bento-card">
-                        <div style="z-index: 2;">
-                            <p
-                                style="color: #86868b; font-weight: 600; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px;">
-                                Power</p>
-                            <h3 style="font-size: 32px;">48-Hour Battery.</h3>
-                            <p style="font-size: 17px; max-width: 30ch;">
-                                Go further without pause. Optimized for marathon tracking.
-                            </p>
-                        </div>
-                        <div class="bento-icon-wrapper">
-                            <img src="images/icons/battery-icon.png" alt="Energy Icon">
+                    <!-- Card 2: FITNESS (Yoga) -->
+                    <article class="exp-card">
+                        <img src="images/hero/lifestyle_yoga_1769972907821.png" alt="Yoga Session" class="exp-card-bg">
+                        <div class="exp-card-content" style="position: relative; margin-top: auto;">
+                            <!-- Text overlay if needed, or leave clean for lifestyle -->
+                            <h3 style="font-size: 24px; color: var(--color-text-primary);">Find your flow.</h3>
                         </div>
                     </article>
+
+                    <!-- Card 3: LIFESTYLE (Run) - Large Width -->
+                    <article class="exp-card large white-text">
+                        <img src="images/hero/lifestyle_fitness_run_1769972868973.png" alt="Runner at Sunrise"
+                            class="exp-card-bg">
+                        <div class="exp-card-content"
+                            style="position: relative; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+                            <h3 style="font-size: 40px;">Get 3 months of NEXUS Fitness+ free.</h3>
+                            <p style="font-size: 21px; margin-top: 16px; opacity: 0.9;">When you buy a NEXUS Watch.</p>
+                            <button class="btn btn-pill" style="margin-top: 24px; background: white; color: black;">Try
+                                it free</button>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
