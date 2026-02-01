@@ -1,0 +1,545 @@
+/* STYLE.CSS - Main Stylsheet */
+@import 'reset.css';
+@import 'variables.css';
+
+/* --- BASE --- */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-primary);
+    font-size: var(--text-body);
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: var(--text-h1);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--text-h2);
+    line-height: 1.2;
+    margin-bottom: var(--space-3);
+}
+
+h3 {
+    font-size: var(--text-h3);
+    line-height: 1.3;
+    margin-bottom: var(--space-2);
+}
+
+p {
+    max-width: var(--measure);
+    margin-bottom: var(--space-3);
+    color: var(--color-text-secondary);
+}
+
+/* --- UTILITIES --- */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+}
+
+section {
+    padding: var(--section-pad) 0;
+    position: relative;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    background-color: rgba(251, 251, 253, 0);
+    transition: background-color var(--duration-std) ease, backdrop-filter var(--duration-std) ease;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+    background-color: rgba(251, 251, 253, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.brand {
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.nav-links a {
+    font-size: 12px;
+    color: var(--color-text-primary);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 980px;
+    font-size: var(--text-small);
+    font-weight: 500;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+/* --- HOME PAGE SPECIFICS --- */
+.hero {
+    min-height: 90vh;
+    padding-top: var(--nav-height);
+    overflow: hidden;
+}
+
+.hero-image-wrapper {
+    margin-top: var(--space-6);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+}
+
+.bento-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-l);
+    padding: var(--space-4);
+    position: relative;
+    overflow: hidden;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s var(--ease-spring);
+}
+
+.bento-card:hover {
+    transform: scale(1.01);
+}
+
+.bento-card.dark {
+    background-color: #000;
+    color: white;
+}
+
+.bento-card.dark h3,
+.bento-card.dark p {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.bento-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.bento-icon-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bento-icon-wrapper img {
+    width: 120px;
+    max-width: 50%;
+    filter: drop-shadow(0 10px 20px rgba(0, 113, 227, 0.3));
+}
+
+/* --- WATCH LISTING SPECIFICS --- */
+.sticky-filter {
+    position: sticky;
+    top: var(--nav-height);
+    z-index: 900;
+    background-color: rgba(245, 245, 247, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 0;
+    margin-bottom: var(--space-6);
+}
+
+.filter-list {
+    display: flex;
+    gap: var(--space-4);
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.filter-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.filter-link.active {
+    color: var(--color-text-primary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+.product-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-l);
+    padding: 48px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    height: 280px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+}
+
+.card-cta {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .card-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- DETAIL PAGE SPECIFICS --- */
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    .detail-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sticky-side {
+        position: sticky;
+        top: var(--nav-height);
+        height: calc(100vh - var(--nav-height));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5F5F7;
+    }
+}
+
+.scroll-side {
+    padding: var(--section-pad) var(--space-4);
+    background-color: white;
+    min-height: 100vh;
+}
+
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+.spec-table tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.spec-table th,
+.spec-table td {
+    text-align: left;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+.spec-table th {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    width: 40%;
+}
+
+.spec-table td {
+    color: var(--color-text-primary);
+}
+
+/* --- CART PAGE SPECIFICS --- */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+@media (min-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 2fr 1fr;
+        /* Items vs Summary */
+    }
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-m);
+    margin-bottom: 16px;
+}
+
+.cart-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 24px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-price {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.btn-qty {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    /* Center +/- */
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-summary {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-l);
+    height: fit-content;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.total-row {
+    border-top: 1px solid var(--color-border);
+    padding-top: 16px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* --- SUPPORT PAGE SPECIFICS --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--color-text-secondary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+}
+
+/* Accordion */
+details {
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    /* Hide default arrow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+details[open] summary::after {
+    content: '-';
+}
+
+details p {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-bg-body);
+    padding: var(--section-pad) 0;
+    border-top: 1px solid var(--color-border);
+    font-size: var(--text-caption);
+    color: var(--color-text-secondary);
+    margin-top: var(--section-pad);
+}

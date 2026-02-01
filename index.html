@@ -1,148 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus</title>
-    <link rel="stylesheet" href="style.css">   
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <title>NEXUS Wearables | Precision Engineered</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <div class="brand">
-            <a href="/" style="text-decoration: none;">
-                NEXUS
-            </a>
-            
+
+    <!-- NAVIGATION (Fixed, Z-Index 1000) -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">NEXUS</a>
+
+            <div class="nav-links">
+                <a href="watches.html">Watches</a>
+                <a href="watch-detail.html">Features</a>
+                <a href="support.html">Support</a>
+                <a href="cart.html">Cart (0)</a>
+            </div>
         </div>
-
-        <div class="navlinks">
-            <a href="/">SMARTWATCHES</a>
-            <a href="/">EARPODS</a>
-            <a href="/">SMARTGLASSES</a>
-            <a href="products/">HEADPHONES</a>
-        </div>
-
-        <div class="nav-end">
-            <a href="/support.html">Support</a>
-            <a href="/account.html"><img src="/files/account.png" alt="" width="16px"></a>
-            <a href="/cart.html"><img src="/files/cart.png" alt="" width="20px"></a>
-        </div>
-
-
     </nav>
 
     <main>
-        <section class="carousel"> 
-            <div class="carousel-item">
-                <div class="carousel-text">
-                    <span style="font-size: xx-large;">NEXUS</span>
-                    <br>
-                    <span style="font-size: 1.1rem; font-weight: 200; width: 40vw; display: block; margin-top: 10px;">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                        Premium wearables engineered for clarity, balance, and flow.
-                    </span>
-                    <button>See Featured</button>
-                    <button>Shop now</button>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container" style="text-align: center;">
+                <h1 style="font-size: var(--text-display); margin-bottom: 8px; margin-top: 4vh;">Precision in Motion.
+                </h1>
+                <p
+                    style="margin: 0 auto 32px auto; font-size: 24px; color: var(--color-text-secondary); max-width: 40ch;">
+                    The new NEXUS Series 7. Engineered for the<br>academic athlete.
+                </p>
+                <div class="cta-group">
+                    <a href="watches.html" class="btn btn-primary">Buy</a>
+                    <a href="watch-detail.html" class="btn"
+                        style="color: var(--color-accent); background: transparent;">Learn more ></a>
                 </div>
-                <img src="images/image2.png" alt="">                
+
+                <div class="hero-image-wrapper">
+                    <!-- High Res Generated Asset -->
+                    <img src="images/hero/watch-hero.png" alt="NEXUS Series 7 Titanium Smartwatch">
+                </div>
             </div>
-
         </section>
 
-        <section class="featured">
-            <h2>Featured</h2>
-            <hr style="width: 40vw;">
-            <div class="featured-items">
-                <div class="featured-item">
-                    <img src="images/image4.png" alt="">
-                    <h3>NEXUS AirPods Pro</h3>
-                    <p>Experience the next level of wireless audio with NEXUS AirPods Pro. Featuring active noise cancellation, superior sound quality, and a comfortable fit for all-day wear.</p>
-                    <button>Shop Now</button>
-                </div>
-                <div class="featured-item">
-                    <img src="images/image5.png" alt="">
-                    <h3>NEXUS Vision VR Headset</h3>
-                    <p>Stay connected and stylish with NEXUS Vision Smart Glasses. Enjoy hands-free calls, music, and notifications while on the go, all in a sleek and modern design.</p>
-                    <button>Shop Now</button>
-                </div>
-                <div class="featured-item">
-                    <img src="images/image3.png" alt="">
-                    <h3>NEXUS Pulse Smartwatch</h3>
-                    <p>Track your fitness and stay connected with the NEXUS Pulse Smartwatch. Featuring heart rate monitoring, GPS, and customizable watch faces to suit your style.</p>
-                    <button>Shop Now</button>
-                </div>
-            
-        </section>
+        <!-- BENTO GRID -->
+        <section class="features" style="background-color: #FAFAFC;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 64px;">
+                    Everything you need. <br>
+                    <span style="color: var(--color-text-secondary); opacity: 0.7;">Nothing you don't.</span>
+                </h2>
 
-        <section class="products">
-            <h2>All Products</h2>
-            <hr style="width: 40vw;">
-            <div class="products-items">
-                <div class="products-item">
-                    <img src="images/image4.png" alt="">
-                    <div>
+                <div class="bento-grid">
+                    <!-- Feature 1: Titanium (Dark Mode Card) -->
+                    <article class="bento-card dark">
+                        <!-- Background Texture -->
+                        <img src="images/hero/titanium-texture.png" alt="" class="bento-bg">
+                        <div style="position: relative; z-index: 2;">
+                            <p
+                                style="color: #86868b; font-weight: 600; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px;">
+                                Materials</p>
+                            <h3 style="font-size: 32px; margin-bottom: 8px;">Aerospace Titanium.</h3>
+                            <p style="color: #cccccc; font-size: 17px; max-width: 30ch;">
+                                Lighter than steel. Harder than aluminum. Designed to endure.
+                            </p>
+                        </div>
+                    </article>
 
-                        <h3>Airpods</h3>
-                    </div>
+                    <!-- Feature 2: Battery (Light Mode Card) -->
+                    <article class="bento-card">
+                        <div style="z-index: 2;">
+                            <p
+                                style="color: #86868b; font-weight: 600; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px;">
+                                Power</p>
+                            <h3 style="font-size: 32px;">48-Hour Battery.</h3>
+                            <p style="font-size: 17px; max-width: 30ch;">
+                                Go further without pause. Optimized for marathon tracking.
+                            </p>
+                        </div>
+                        <div class="bento-icon-wrapper">
+                            <img src="images/icons/battery-icon.png" alt="Energy Icon">
+                        </div>
+                    </article>
                 </div>
-                <div class="products-item">
-                    <img src="images/image5.png" alt="">
-                    <div>
-
-                        <h3>Smart Glasses</h3>
-
-                    </div>
-                </div>
-                <div class="products-item">
-                    <img src="images/image3.png" alt="">
-                    <div>
-                        <h3>Smartwatch</h3>
-                        
-                    </div>
-                </div>
-                <div class="products-item">
-                    <img src="images/image5.png" alt="">
-                    <div>
-
-                        <h3>VR Headset</h3>
-
-                    </div>
-                </div>
-                
+            </div>
         </section>
     </main>
+
     <footer>
-        <div class="footer-brand">
-            <h3>NEXUS</h3>
-            <p>Premium wearables engineered for clarity, balance, and flow.</p>
-        </div>
-        <div class="footer-links">
-            <div>
-                <h4>Products</h4>
-                <a href="/">Smartwatches</a>
-                <a href="/">Earpods</a>
-                <a href="/">Smartglasses</a>
-                <a href="/">Headphones</a>
-            </div>
-            <div>
-                <h4>Company</h4>
-                <a href="/">About</a>
-                <a href="/">Careers</a>
-                <a href="/">Press</a>
-                <a href="/">Sustainability</a>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <a href="/">Help Center</a>
-                <a href="/">Product care</a>
-                <a href="/">Warranty</a>
-                <a href="/">Contact</a>
-            </div>
+        <div class="container">
+            <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
         </div>
     </footer>
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>

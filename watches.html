@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">NEXUS</a>
+            <div class="nav-links">
+                <a href="watches.html" style="opacity: 1;">Watches</a>
+                <a href="watch-detail.html">Features</a>
+                <a href="support.html">Support</a>
+                <a href="cart.html">Cart (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="padding-top-nav">
+        <!-- Sticky Sub-Nav -->
+        <header class="sticky-filter">
+            <div class="container">
+                <nav class="filter-list">
+                    <a href="#" class="filter-link active">All Models</a>
+                    <a href="#" class="filter-link">Sport Series</a>
+                    <a href="#" class="filter-link">Leather Collection</a>
+                    <a href="#" class="filter-link">Titanium Edition</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="listing">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 64px; font-size: 48px;">Which NEXUS is right for you?</h1>
+
+                <div class="product-grid">
+                    <!-- Card 1: Sport Black -->
+                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
+                        <figure>
+                            <img src="images/products/product_sport_black_1769971143091.png" alt="NEXUS Sport Black"
+                                class="product-image">
+                        </figure>
+                        <h3>NEXUS Sport.</h3>
+                        <p class="price">From $399</p>
+                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
+                            The essential companion for your daily runs.
+                        </p>
+                        <div class="card-cta">Buy ></div>
+                    </article>
+
+                    <!-- Card 2: Leather Brown -->
+                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
+                        <figure>
+                            <img src="images/products/product_leather_brown_1769971158203.png"
+                                alt="NEXUS Leather Edition" class="product-image">
+                        </figure>
+                        <h3>NEXUS Heritage.</h3>
+                        <p class="price">From $499</p>
+                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
+                            Classic leather craftsmanship met with modern tech.
+                        </p>
+                        <div class="card-cta">Buy ></div>
+                    </article>
+
+                    <!-- Card 3: Steel Silver -->
+                    <article class="product-card" onclick="window.location.href='watch-detail.html'">
+                        <figure>
+                            <img src="images/products/product_steel_silver_1769971174728.png" alt="NEXUS Steel"
+                                class="product-image">
+                        </figure>
+                        <h3>NEXUS Steel.</h3>
+                        <p class="price">From $699</p>
+                        <p style="font-size: 14px; max-width: 25ch; margin: 0 auto; margin-bottom: 16px;">
+                            Polished stainless steel link bracelet.
+                        </p>
+                        <div class="card-cta">Buy ></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <!-- Simple JS to highlight active header on scroll if we wanted, but sticking to basics -->
+</body>
+
+</html>

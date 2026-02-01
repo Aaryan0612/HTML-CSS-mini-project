@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Support</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">NEXUS</a>
+            <div class="nav-links">
+                <a href="watches.html">Watches</a>
+                <a href="watch-detail.html">Features</a>
+                <a href="support.html" style="opacity: 1;">Support</a>
+                <a href="cart.html">Cart (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        <section>
+            <div class="container" style="max-width: 800px;"> <!-- Narower for text focus -->
+                <h1 style="text-align: center; margin-top: 48px; margin-bottom: 16px;">How can we help?</h1>
+                <p style="text-align: center; margin: 0 auto 64px auto;">Search our knowledge base or contact a
+                    concierge.</p>
+
+                <!-- FAQ ACCORDION -->
+                <h2 style="font-size: 24px;">Frequently Asked</h2>
+                <div style="margin-bottom: 64px;">
+                    <details>
+                        <summary>How do I pair my NEXUS watch?</summary>
+                        <p>Turn on Bluetooth on your phone and open the NEXUS app. Hold the side button on your watch
+                            for 3 seconds until the logo appears.</p>
+                    </details>
+                    <details>
+                        <summary>Is the NEXUS Sport waterproof?</summary>
+                        <p>Yes, all Series 7 watches are rated WR50, meaning they are water-resistant up to 50 meters
+                            and suitable for swimming.</p>
+                    </details>
+                    <details>
+                        <summary>What is the battery life?</summary>
+                        <p>The NEXUS Sport lasts up to 48 hours on a single charge with normal use. GPS tracking may
+                            reduce this to 18 hours.</p>
+                    </details>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <h2 style="font-size: 24px;">Contact Us</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5"
+                            placeholder="Tell us about your issue..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
