@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS | Support</title>
+    <title>NEXUS | Official Support</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +18,6 @@
         <div class="container nav-content">
             <a href="index.html" class="brand">NEXUS</a>
             <div class="nav-links">
-
-                <!-- WATCHES DROP -->
                 <div class="nav-item">
                     <a href="watches.html" class="nav-link">Watches</a>
                     <div class="nav-dropdown">
@@ -44,7 +42,6 @@
                     </div>
                 </div>
 
-                <!-- AUDIO DROP -->
                 <div class="nav-item">
                     <a href="audio.html" class="nav-link">Audio</a>
                     <div class="nav-dropdown">
@@ -68,64 +65,89 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="nav-item"><a href="support.html" class="nav-link" style="opacity: 1;">Support</a></div>
                 <div class="nav-item"><a href="cart.html" class="nav-link">Cart (0)</a></div>
             </div>
         </div>
     </nav>
 
-    <main style="padding-top: var(--nav-height);">
-        <section>
-            <div class="container" style="max-width: 800px;"> <!-- Narower for text focus -->
-                <h1 style="text-align: center; margin-top: 48px; margin-bottom: 16px;">How can we help?</h1>
-                <p style="text-align: center; margin: 0 auto 64px auto;">Search our knowledge base or contact a
-                    concierge.</p>
+    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
 
-                <!-- FAQ ACCORDION -->
-                <h2 style="font-size: 24px;">Frequently Asked</h2>
-                <div style="margin-bottom: 64px;">
-                    <details>
-                        <summary>How do I pair my NEXUS watch?</summary>
-                        <p>Turn on Bluetooth on your phone and open the NEXUS app. Hold the side button on your watch
-                            for 3 seconds until the logo appears.</p>
-                    </details>
-                    <details>
-                        <summary>Is the NEXUS Sport waterproof?</summary>
-                        <p>Yes, all Series 7 watches are rated WR50, meaning they are water-resistant up to 50 meters
-                            and suitable for swimming.</p>
-                    </details>
-                    <details>
-                        <summary>What is the battery life?</summary>
-                        <p>The NEXUS Sport lasts up to 48 hours on a single charge with normal use. GPS tracking may
-                            reduce this to 18 hours.</p>
-                    </details>
+        <!-- HERO SECTION -->
+        <div class="support-hero">
+            <h1 class="support-hero-title">Support</h1>
+            <p class="support-hero-subtitle">What can we help you with today?</p>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="support-search-container">
+            <input type="text" class="support-search-input" placeholder="Search for support topics...">
+        </div>
+
+        <!-- PRODUCT ICON NAV -->
+        <div class="product-support-nav">
+            <a href="#" class="product-nav-item">
+                <img src="images/products/nexus_watch_hero_1769970927459.png" alt="Nexus Watch"
+                    class="product-nav-icon">
+                <span class="product-nav-label">Watch</span>
+            </a>
+            <a href="#" class="product-nav-item">
+                <img src="images/products/nexus_buds_pro_1769974523745.png" alt="Audio" class="product-nav-icon">
+                <span class="product-nav-label">Audio</span>
+            </a>
+            <a href="#" class="product-nav-item">
+                <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Accessories"
+                    class="product-nav-icon">
+                <span class="product-nav-label">Accessories</span>
+            </a>
+            <a href="#" class="product-nav-item">
+                <div class="product-nav-icon"
+                    style="background:#f5f5f7; border-radius:24px; display:flex; align-items:center; justify-content:center;">
+                    <span style="font-size:48px; color:#0071e3;">+</span>
                 </div>
+                <span class="product-nav-label">Nexus Care+</span>
+            </a>
+        </div>
 
-                <!-- CONTACT FORM -->
-                <h2 style="font-size: 24px;">Contact Us</h2>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" class="form-control" rows="5"
-                            placeholder="Tell us about your issue..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+        <!-- SUPPORT TOOLS GRID -->
+        <div class="support-topics-section">
+            <h2 class="support-section-title">Support Tools</h2>
+            <div class="support-bento-grid">
+                <a href="#" class="support-tool-card">
+                    <div class="tool-icon">🔑</div>
+                    <div class="tool-title">Reset Password</div>
+                    <div class="tool-desc">Forgot your Nexus ID password? Reset it here.</div>
+                </a>
+                <a href="#" class="support-tool-card">
+                    <div class="tool-icon">🛡️</div>
+                    <div class="tool-title">Check Coverage</div>
+                    <div class="tool-desc">Check your warranty status and Nexus Care eligibility.</div>
+                </a>
+                <a href="#" class="support-tool-card">
+                    <div class="tool-icon">💳</div>
+                    <div class="tool-title">Billing</div>
+                    <div class="tool-desc">Update payment methods and check purchase history.</div>
+                </a>
             </div>
-        </section>
+        </div>
+
+        <!-- CONTACT BANNER -->
+        <div class="contact-banner">
+            <div class="contact-content">
+                <h2 class="contact-title">Get Support</h2>
+                <p class="contact-subtitle">Need more help? Chat with a Nexus Expert or schedule a repair.</p>
+                <div style="display: flex; gap: 16px;">
+                    <a href="#" class="btn btn-pill">Start now</a>
+                    <a href="#" class="btn btn-pill" style="background-color: #e8e8ed; color: #1d1d1f;">Download the
+                        app</a>
+                </div>
+            </div>
+            <div class="contact-image">
+                <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Contact Support"
+                    style="height: 120px; object-fit: contain;">
+            </div>
+        </div>
+
     </main>
 
     <footer>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +18,6 @@
         <div class="container nav-content">
             <a href="index.html" class="brand">NEXUS</a>
             <div class="nav-links">
-
-                <!-- WATCHES DROP -->
                 <div class="nav-item">
                     <a href="watches.html" class="nav-link">Watches</a>
                     <div class="nav-dropdown">
@@ -44,7 +42,6 @@
                     </div>
                 </div>
 
-                <!-- AUDIO DROP -->
                 <div class="nav-item">
                     <a href="audio.html" class="nav-link">Audio</a>
                     <div class="nav-dropdown">
@@ -70,82 +67,61 @@
                 </div>
 
                 <div class="nav-item"><a href="support.html" class="nav-link">Support</a></div>
-                <div class="nav-item"><a href="cart.html" class="nav-link" style="opacity: 1;">Cart (2)</a></div>
+                <div class="nav-item"><a href="cart.html" class="nav-link" style="opacity: 1;">Cart (0)</a></div>
             </div>
         </div>
     </nav>
 
-    <main style="padding-top: var(--nav-height);">
-        <section>
-            <div class="container">
-                <h1 style="margin-top: 40px; border-bottom: 1px solid var(--color-border); padding-bottom: 24px;">Review
-                    your bag.</h1>
+    <main class="padding-top-nav">
+        <div class="cart-page-container">
 
-                <div class="cart-layout">
-                    <!-- Left: Cart Items -->
-                    <div class="cart-items">
+            <h1 class="cart-page-title">Your Bag</h1>
 
-                        <!-- Item 1 -->
-                        <div class="cart-item">
-                            <img src="images/products/product_sport_black_1769971143091.png" alt="Sport Black"
-                                class="cart-image">
-                            <div class="item-details">
-                                <h3>NEXUS Sport</h3>
-                                <p class="item-price" data-price="399.00">Black Sport Band - 44mm</p>
-                                <div class="qty-controls">
-                                    <button class="btn-qty minus">-</button>
-                                    <input type="number" class="qty-input" value="1" readonly>
-                                    <button class="btn-qty plus">+</button>
-                                </div>
-                            </div>
-                            <div class="item-subtotal" style="font-weight: 500;">$399.00</div>
-                        </div>
+            <!-- Empty Cart State -->
+            <div id="cart-empty" class="cart-empty" style="display: none;">
+                <div class="empty-icon">🛒</div>
+                <h2>Your bag is empty</h2>
+                <p>Looks like you haven't added anything to your bag yet.</p>
+                <a href="watches.html" class="btn btn-pill">Shop Now</a>
+            </div>
 
-                        <!-- Item 2 -->
-                        <div class="cart-item">
-                            <img src="images/products/product_leather_brown_1769971158203.png" alt="Leather Brown"
-                                class="cart-image">
-                            <div class="item-details">
-                                <h3>NEXUS Heritage</h3>
-                                <p class="item-price" data-price="499.00">Brown Leather - 44mm</p>
-                                <div class="qty-controls">
-                                    <button class="btn-qty minus">-</button>
-                                    <input type="number" class="qty-input" value="1" readonly>
-                                    <button class="btn-qty plus">+</button>
-                                </div>
-                            </div>
-                            <div class="item-subtotal" style="font-weight: 500;">$499.00</div>
-                        </div>
+            <div class="cart-layout">
+                <!-- Left: Cart Items (Dynamic) -->
+                <div id="cart-items-container" class="cart-items">
+                    <!-- Items rendered by JavaScript -->
+                </div>
 
+                <!-- Right: Summary -->
+                <aside class="cart-summary">
+                    <h3 class="summary-title">Order Summary</h3>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">FREE</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Tax</span>
+                        <span>Included</span>
                     </div>
 
-                    <!-- Right: Summary -->
-                    <aside class="cart-summary">
-                        <h3 style="font-size: 18px; margin-bottom: 24px;">Summary</h3>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="summary-total">₹0</span>
+                    </div>
 
-                        <div class="summary-row">
-                            <span>Subtotal</span>
-                            <span id="summary-subtotal">$898.00</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Shipping</span>
-                            <span>FREE</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Estimated Tax</span>
-                            <span>$0.00</span> <!-- Simple for demo -->
-                        </div>
+                    <button class="btn btn-pill checkout-btn">Checkout</button>
 
-                        <div class="summary-row total-row">
-                            <span>Total</span>
-                            <span id="summary-total">$898.00</span>
-                        </div>
-
-                        <button class="btn btn-primary" style="width: 100%; margin-top: 24px;">Checkout</button>
-                    </aside>
-                </div>
+                    <div class="checkout-note">
+                        <p>Free delivery on all orders</p>
+                        <p>30-day return policy</p>
+                    </div>
+                </aside>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
