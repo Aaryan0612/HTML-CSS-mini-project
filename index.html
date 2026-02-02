@@ -75,21 +75,31 @@
         </div>
     </nav>
 
-    <main>
+    <main style="    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
         <!-- HERO SECTION -->
-        <section class="apple-section text-center" style="padding-top: 140px; padding-bottom: 60px;">
+        <section class="apple-section text-center" style="padding:0;padding-top: 140px; padding-bottom: 60px; max-width: 100%;">
             <div class="container">
-                <h1 class="apple-hero-text">NEXUS Series 7</h1>
-                <p class="apple-subhead">Precision in Motion.</p>
+                <div style="padding: 150px;">
 
-                <div style="margin-bottom: 50px; display: flex; gap: 16px; justify-content: center;">
-                    <a href="watches.html" class="btn btn-pill">Shop Series 7</a>
-                    <a href="watch-detail.html" class="link-arrow" style="font-size: 17px;">Learn more ></a>
+                    <h1 class="apple-hero-text">NEXUS Series 7</h1>
+                    <p class="apple-subhead">Precision in Motion.</p>
+    
+                    <div style="margin-bottom: 50px; display: flex; gap: 16px; justify-content: center; align-items: center;">
+                        <a href="watches.html" class="btn btn-pill">Shop Series 7</a>
+                        <a href="watch-detail.html" class="link-arrow" style="font-size: 17px;">Learn more ></a>
+                    </div>
                 </div>
 
-                <div class="hero-image-wrapper">
-                    <img src="images/hero/watch-hero.png" alt="Nexus Series 7"
-                        style="max-width: 600px; width: 100%; height: auto;">
+                <div class="hero-image-wrapper" style="width: 100vw; background: #fffcf7; flex-direction: row; display: flex;">
+                    <img src="images/products/product_leather_brown_1769971158203.png" alt="Nexus Series 7" style="max-width: 600px; width: 100%; height: auto;">
+                    <div style="display: flex; justify-content: center; flex-direction: column; align-items: start; padding: 20px 40px; gap: 10px;">
+
+                        <h1>The All New </h1>
+                        <h1 class="apple-hero-text">Leather Gold Series</h1>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,53 +107,38 @@
         <!-- GET TO KNOW NEXUS WATCH -->
         <section class="apple-section">
             <div class="container">
-                <h2 style="font-size: 56px; margin-bottom: 60px; text-align: left;">Get to know Nexus Watch.</h2>
+                <h2 style="font-size: 56px; margin-bottom: 80px; text-align: left; margin-top: 0;">Nexus Watch.</h2>
 
-                <div class="bento-vertical-grid">
+                <div style="width: 100%; display: flex; flex-direction: row; justify-content: end; margin-bottom: 15px; padding: 20px; cursor: pointer;">Show more </div>
+                <div class="bento-card-flex">
 
                     <!-- Card 1: HEALTH -->
-                    <div class="card-vertical">
-                        <div class="card-category">Health</div>
-                        <div class="card-headline">Knows you.<br>Insights and out.</div>
-                        <img src="images/hero/heart-rate.png" class="card-image-bottom"
-                            style="width: 80%; left: 10%; bottom: 30px; object-fit: contain; height: auto;">
-                    </div>
+                     <div class="card">
 
-                    <!-- Card 2: FITNESS -->
-                    <div class="card-vertical" style="background-color: black;">
-                        <div class="card-category" style="color: #999;">Fitness</div>
-                        <div class="card-headline" style="color: white;">Unlimited<br>motivation.</div>
-                        <!-- CSS Rings Representation -->
-                        <div
-                            style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 140px; height: 140px;">
-                            <div style="position: absolute; inset: 0; border: 12px solid #e01e38; border-radius: 50%;">
-                            </div>
-                            <div
-                                style="position: absolute; inset: 16px; border: 12px solid #9df126; border-radius: 50%;">
-                            </div>
-                            <div
-                                style="position: absolute; inset: 32px; border: 12px solid #20c3d9; border-radius: 50%;">
-                            </div>
-                        </div>
-                    </div>
+                         <div class="card-vertical">
+                             <div class="card-headline" style="padding: 30px; position: absolute;">Black Beast</div>
+                             <img src="images/products/product_sport_black_1769971143091.png" class="card-image-bottom"
+                                 style="object-fit: contain;">
+                         </div>
+                     </div>
 
-                    <!-- Card 3: CONNECTIVITY -->
-                    <div class="card-vertical">
-                        <div class="card-category">Connectivity</div>
-                        <div class="card-headline">Keep help<br>close at hand.</div>
-                        <!-- Reusing watch hero as placeholder for connectivity/SOS -->
-                        <img src="images/products/nexus_watch_hero_1769970927459.png" class="card-image-bottom"
-                            style="height: 200px; width: auto; left: 50%; transform: translateX(-50%);">
-                    </div>
+                    <!-- Card 1: HEALTH -->
+                     <div class="card">
 
-                    <!-- Card 4: ULTRA LINE -->
-                    <div class="card-vertical" style="background: white; border: 1px solid #e5e5e5;">
-                        <div class="card-category">Nexus Ultra</div>
-                        <div class="card-headline">The ultimate sports<br>and adventure watch.</div>
-                        <img src="images/products/product_sport_black_1769971143091.png" class="card-image-bottom"
-                            style="height: 250px; width: auto; left: 50%; transform: translateX(-50%);">
-                    </div>
+                         <div class="card-vertical">
+                             <div class="card-headline" style="padding: 30px; position: absolute;">Silver Standard</div>
+                             <img src="images/products/product_steel_silver_1769971174728.png" class="card-image-bottom"
+                                 style="object-fit: contain;">
+                         </div>
+                     </div>
+                     <div class="card">
 
+                         <div class="card-vertical">
+                             <div class="card-headline" style="padding: 30px; position: absolute;">Leather Gold</div>
+                             <img src="images/products/product_leather_brown_1769971158203.png" class="card-image-bottom"
+                                 style="object-fit: contain;">
+                         </div>
+                     </div>
                 </div>
             </div>
         </section>
