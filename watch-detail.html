@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS Sport | Technical Specifications</title>
+    <title id="page-title">NEXUS Watch | Details</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +18,6 @@
         <div class="container nav-content">
             <a href="index.html" class="brand">NEXUS</a>
             <div class="nav-links">
-
-                <!-- WATCHES DROP -->
                 <div class="nav-item">
                     <a href="watches.html" class="nav-link">Watches</a>
                     <div class="nav-dropdown">
@@ -44,7 +42,6 @@
                     </div>
                 </div>
 
-                <!-- AUDIO DROP -->
                 <div class="nav-item">
                     <a href="audio.html" class="nav-link">Audio</a>
                     <div class="nav-dropdown">
@@ -75,101 +72,221 @@
         </div>
     </nav>
 
-    <main class="detail-layout" style="margin-top: var(--nav-height);">
+    <main class="padding-top-nav">
 
-        <!-- Left: Sticky Product Image -->
-        <div class="sticky-side">
-            <figure style="width: 100%; max-width: 500px; padding: 40px;">
-                <img src="images/products/product_sport_black_1769971143091.png" alt="NEXUS Sport Black Edition"
-                    style="width: 100%; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.1));">
-                <figcaption
-                    style="text-align: center; margin-top: 24px; font-size: 12px; color: var(--color-text-secondary);">
-                    Midnight Black Case with Ventilated Sport Band
-                </figcaption>
-            </figure>
-        </div>
+        <!-- Product Hero Section -->
+        <section class="product-detail-hero">
+            <div class="product-detail-container">
 
-        <!-- Right: Scrollable Specs -->
-        <div class="scroll-side">
-            <div style="max-width: 600px; margin: 0 auto;">
-                <p
-                    style="color: var(--color-accent); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">
-                    New Release</p>
-                <h1 style="margin-bottom: 8px;">NEXUS Sport.</h1>
-                <p class="price" style="font-size: 24px; color: var(--color-text-primary); margin-bottom: 24px;">$399.00
-                </p>
-
-                <p>
-                    Engineered for the academic athlete. The NEXUS Sport combines aerospace-grade polymers with a
-                    high-contrast OLED display, delivering precision metrics in any lighting condition.
-                </p>
-
-                <div style="margin: 32px 0;">
-                    <button class="btn btn-primary" style="width: 100%;">Add to Cart</button>
-                    <p style="text-align: center; font-size: 12px; margin-top: 8px;">Free shipping on all orders over
-                        $100.</p>
+                <!-- Left: Product Image -->
+                <div class="product-image-section">
+                    <div class="product-image-wrapper" id="product-image-bg">
+                        <img id="product-image" src="" alt="Product Image" class="product-main-image">
+                    </div>
                 </div>
 
-                <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 48px 0;">
+                <!-- Right: Product Info -->
+                <div class="product-info-section">
+                    <span class="product-tag" id="product-tag">New</span>
+                    <h1 class="product-title" id="product-name">Loading...</h1>
+                    <p class="product-tagline" id="product-tagline"></p>
 
-                <!-- Semantic Definition List for Key Features -->
-                <h3>Key Features</h3>
-                <dl style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
-                    <div>
-                        <dt style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">GPS + GLONASS</dt>
-                        <dd style="font-size: 14px; color: var(--color-text-secondary);">Dual-band tracking for improved
-                            accuracy.</dd>
+                    <div class="product-price-block">
+                        <span class="product-price" id="product-price">₹0</span>
+                        <span class="product-finance" id="product-finance"></span>
                     </div>
-                    <div>
-                        <dt style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">WR50 Water Resistant</dt>
-                        <dd style="font-size: 14px; color: var(--color-text-secondary);">Safe for swimming and
-                            high-velocity water sports.</dd>
-                    </div>
-                    <div>
-                        <dt style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Heart Rate Zone</dt>
-                        <dd style="font-size: 14px; color: var(--color-text-secondary);">Real-time alerts when you drift
-                            out of zone.</dd>
-                    </div>
-                    <div>
-                        <dt style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Sleep Score</dt>
-                        <dd style="font-size: 14px; color: var(--color-text-secondary);">Advanced REM tracking.</dd>
-                    </div>
-                </dl>
 
-                <!-- Semantic Table for Tech Specs (Mandatory) -->
-                <h3>Technical Specifications</h3>
-                <table class="spec-table">
-                    <caption>Hardware Hardware Details</caption>
+                    <p class="product-description" id="product-description"></p>
+
+                    <div class="product-actions">
+                        <button class="btn btn-pill" id="add-to-cart-btn" onclick="handleAddToCart()">Add to
+                            Bag</button>
+                        <a href="cart.html" class="btn btn-pill-outline">View Bag</a>
+                    </div>
+
+                    <div class="product-shipping-note">
+                        <span>✓</span> Free delivery on all orders
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="product-features-section">
+            <div class="container">
+                <h2 class="features-title">Key Features</h2>
+                <div class="features-grid" id="features-grid">
+                    <!-- Features populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Specs -->
+        <section class="product-specs-section">
+            <div class="container">
+                <h2 class="specs-title">Technical Specifications</h2>
+                <table class="specs-table" id="specs-table">
                     <tbody>
-                        <tr>
-                            <th>Display</th>
-                            <td>Always-On Retina display, 1000 nits</td>
-                        </tr>
-                        <tr>
-                            <th>Chip</th>
-                            <td>S7 SiP with 64-bit dual-core processor</td>
-                        </tr>
-                        <tr>
-                            <th>Connectivity</th>
-                            <td>Wi-Fi 802.11b/g/n, Bluetooth 5.0</td>
-                        </tr>
-                        <tr>
-                            <th>Power</th>
-                            <td>Up to 18 hours battery life</td>
-                        </tr>
-                        <tr>
-                            <th>Dimensions</th>
-                            <td>44mm x 38mm x 10.7mm</td>
-                        </tr>
-                        <tr>
-                            <th>Case Weight</th>
-                            <td>36.7g</td>
-                        </tr>
+                        <!-- Specs populated by JS -->
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Product Data
+        const WATCH_DETAILS = {
+            'nexus-series-10': {
+                id: 'nexus-series-10',
+                name: 'Nexus Watch Series 10',
+                tagline: 'The ultimate watch for a healthy life.',
+                price: 46900,
+                finance: 'or ₹7,817/mo. for 6 mo.',
+                description: 'The most advanced health sensors meet a stunning Always-On Retina display. Series 10 brings breakthrough technology to your wrist with ECG, blood oxygen monitoring, and sleep tracking.',
+                image: 'images/products/product_sport_black_1769971143091.png',
+                bgClass: 'bg-product-light',
+                features: [
+                    { title: 'ECG App', desc: 'Take an ECG anytime, anywhere.' },
+                    { title: 'Blood Oxygen', desc: 'Measure your blood oxygen levels.' },
+                    { title: 'Always-On Display', desc: 'See the time and your watch face at a glance.' },
+                    { title: 'Sleep Tracking', desc: 'Track your sleep stages and patterns.' }
+                ],
+                specs: [
+                    ['Display', 'Always-On LTPO OLED, 1000 nits'],
+                    ['Chip', 'S10 SiP with 64-bit dual-core processor'],
+                    ['Sensors', 'ECG, Blood Oxygen, Heart Rate, Accelerometer'],
+                    ['Connectivity', 'Wi-Fi, Bluetooth 5.3, NFC'],
+                    ['Water Resistance', 'WR50 (50 meters)'],
+                    ['Battery', 'Up to 18 hours'],
+                    ['Case Size', '44mm']
+                ]
+            },
+            'nexus-se-3': {
+                id: 'nexus-se-3',
+                name: 'Nexus Watch SE 3',
+                tagline: 'Essential health features at a great value.',
+                price: 25900,
+                finance: 'or ₹4,317/mo. for 6 mo.',
+                description: 'All the essentials to help you stay connected, active, motivated, and healthy. Nexus Watch SE has the core features you need at an accessible price point.',
+                image: 'images/products/product_leather_brown_1769971158203.png',
+                bgClass: 'bg-product-blue',
+                features: [
+                    { title: 'Heart Rate', desc: 'Get high and low heart rate notifications.' },
+                    { title: 'Fall Detection', desc: 'Get help when you need it most.' },
+                    { title: 'Workout Tracking', desc: 'Track all your favorite activities.' },
+                    { title: 'Family Setup', desc: 'Connect family members who don\'t have a phone.' }
+                ],
+                specs: [
+                    ['Display', 'Retina OLED, 1000 nits'],
+                    ['Chip', 'S8 SiP with 64-bit dual-core processor'],
+                    ['Sensors', 'Heart Rate, Accelerometer, Gyroscope'],
+                    ['Connectivity', 'Wi-Fi, Bluetooth 5.0'],
+                    ['Water Resistance', 'WR50 (50 meters)'],
+                    ['Battery', 'Up to 18 hours'],
+                    ['Case Size', '44mm']
+                ]
+            },
+            'nexus-ultra-2': {
+                id: 'nexus-ultra-2',
+                name: 'Nexus Watch Ultra 2',
+                tagline: 'The ultimate sports and adventure watch.',
+                price: 89900,
+                finance: 'or ₹14,983/mo. for 6 mo.',
+                description: 'The most rugged and capable Nexus Watch. Designed for endurance athletes, outdoor adventurers, and anyone who wants the ultimate smartwatch experience.',
+                image: 'images/products/product_steel_silver_1769971174728.png',
+                bgClass: 'bg-product-cream',
+                features: [
+                    { title: 'Titanium Case', desc: 'Aerospace-grade titanium for durability.' },
+                    { title: 'Dual-Frequency GPS', desc: 'The most accurate GPS ever in a smartwatch.' },
+                    { title: '36-Hour Battery', desc: 'Enough for multi-day adventures.' },
+                    { title: 'Depth Gauge', desc: 'Dive to 40 meters with confidence.' }
+                ],
+                specs: [
+                    ['Display', 'Always-On LTPO OLED, 3000 nits'],
+                    ['Chip', 'S10 SiP with 64-bit dual-core processor'],
+                    ['Sensors', 'Dual-frequency GPS, Depth Gauge, Water Temperature'],
+                    ['Connectivity', 'Wi-Fi, Bluetooth 5.3, NFC, Satellite'],
+                    ['Water Resistance', 'WR100 + EN13319 certified'],
+                    ['Battery', 'Up to 36 hours (72 in low power)'],
+                    ['Case Size', '49mm Titanium']
+                ]
+            }
+        };
+
+        // Get product ID from URL
+        function getProductId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id') || 'nexus-series-10';
+        }
+
+        // Render product details
+        function renderProduct() {
+            const productId = getProductId();
+            const product = WATCH_DETAILS[productId];
+
+            if (!product) {
+                document.getElementById('product-name').textContent = 'Product Not Found';
+                return;
+            }
+
+            // Update page title
+            document.getElementById('page-title').textContent = `${product.name} | NEXUS`;
+
+            // Update product info
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-tagline').textContent = product.tagline;
+            document.getElementById('product-price').textContent = '₹' + product.price.toLocaleString('en-IN');
+            document.getElementById('product-finance').textContent = product.finance;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-image').alt = product.name;
+            document.getElementById('product-image-bg').className = 'product-image-wrapper ' + product.bgClass;
+
+            // Store product ID for add to cart
+            document.getElementById('add-to-cart-btn').dataset.productId = productId;
+
+            // Render features
+            const featuresGrid = document.getElementById('features-grid');
+            featuresGrid.innerHTML = product.features.map(f => `
+                <div class="feature-card">
+                    <h3 class="feature-title">${f.title}</h3>
+                    <p class="feature-desc">${f.desc}</p>
+                </div>
+            `).join('');
+
+            // Render specs
+            const specsTable = document.getElementById('specs-table').querySelector('tbody');
+            specsTable.innerHTML = product.specs.map(([label, value]) => `
+                <tr>
+                    <th>${label}</th>
+                    <td>${value}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Add to cart handler
+        function handleAddToCart() {
+            const btn = document.getElementById('add-to-cart-btn');
+            const productId = btn.dataset.productId;
+            if (productId && typeof addToCart === 'function') {
+                addToCart(productId);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProduct();
+            updateCartCount();
+        });
+    </script>
 
     <script src="js/app.js"></script>
 </body>

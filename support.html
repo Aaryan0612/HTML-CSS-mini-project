@@ -71,82 +71,141 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
+    <main class="padding-top-nav">
 
         <!-- HERO SECTION -->
-        <div class="support-hero">
-            <h1 class="support-hero-title">Support</h1>
-            <p class="support-hero-subtitle">What can we help you with today?</p>
-        </div>
+        <section class="support-hero-section">
+            <h1 class="support-main-title">NEXUS Support</h1>
 
-        <!-- SEARCH BAR -->
-        <div class="support-search-container">
-            <input type="text" class="support-search-input" placeholder="Search for support topics...">
-        </div>
+            <!-- Search Bar -->
+            <div class="support-search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="support-search" placeholder="Search for topics, products, and more">
+            </div>
+        </section>
 
-        <!-- PRODUCT ICON NAV -->
-        <div class="product-support-nav">
-            <a href="#" class="product-nav-item">
-                <img src="images/products/nexus_watch_hero_1769970927459.png" alt="Nexus Watch"
-                    class="product-nav-icon">
-                <span class="product-nav-label">Watch</span>
-            </a>
-            <a href="#" class="product-nav-item">
-                <img src="images/products/nexus_buds_pro_1769974523745.png" alt="Audio" class="product-nav-icon">
-                <span class="product-nav-label">Audio</span>
-            </a>
-            <a href="#" class="product-nav-item">
-                <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Accessories"
-                    class="product-nav-icon">
-                <span class="product-nav-label">Accessories</span>
-            </a>
-            <a href="#" class="product-nav-item">
-                <div class="product-nav-icon"
-                    style="background:#f5f5f7; border-radius:24px; display:flex; align-items:center; justify-content:center;">
-                    <span style="font-size:48px; color:#0071e3;">+</span>
+        <!-- PRODUCTS GRID -->
+        <section class="support-products-section">
+            <div class="support-products-grid">
+
+                <!-- Watch -->
+                <a href="watches.html" class="support-product-card">
+                    <div class="support-product-image">
+                        <img src="images/products/nexus_watch_hero_1769970927459.png" alt="Nexus Watch">
+                    </div>
+                    <h3 class="support-product-name">Nexus Watch</h3>
+                    <p class="support-product-link">Explore Watch Support →</p>
+                </a>
+
+                <!-- Audio -->
+                <a href="audio.html" class="support-product-card">
+                    <div class="support-product-image">
+                        <img src="images/products/nexus_buds_pro_1769974523745.png" alt="Nexus Audio">
+                    </div>
+                    <h3 class="support-product-name">Nexus Audio</h3>
+                    <p class="support-product-link">Explore Audio Support →</p>
+                </a>
+
+                <!-- Accessories -->
+                <a href="accessories.html" class="support-product-card">
+                    <div class="support-product-image">
+                        <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Accessories">
+                    </div>
+                    <h3 class="support-product-name">Accessories</h3>
+                    <p class="support-product-link">Explore Accessories →</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- QUICK LINKS -->
+        <section class="support-quick-section">
+            <div class="container">
+                <h2 class="support-section-heading">Quick Links</h2>
+                <div class="support-quick-grid">
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">🔑</div>
+                        <div class="quick-card-content">
+                            <h3>Reset Password</h3>
+                            <p>Recover your Nexus ID account</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">📦</div>
+                        <div class="quick-card-content">
+                            <h3>Track Order</h3>
+                            <p>View your order status</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">🛡️</div>
+                        <div class="quick-card-content">
+                            <h3>Check Coverage</h3>
+                            <p>Warranty and Nexus Care+ status</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">🔧</div>
+                        <div class="quick-card-content">
+                            <h3>Repairs</h3>
+                            <p>Schedule a repair appointment</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">💳</div>
+                        <div class="quick-card-content">
+                            <h3>Billing & Payments</h3>
+                            <p>Manage subscriptions and payments</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="support-quick-card">
+                        <div class="quick-card-icon">📱</div>
+                        <div class="quick-card-content">
+                            <h3>Setup Guide</h3>
+                            <p>Get started with your device</p>
+                        </div>
+                        <span class="quick-card-arrow">→</span>
+                    </a>
+
                 </div>
-                <span class="product-nav-label">Nexus Care+</span>
-            </a>
-        </div>
-
-        <!-- SUPPORT TOOLS GRID -->
-        <div class="support-topics-section">
-            <h2 class="support-section-title">Support Tools</h2>
-            <div class="support-bento-grid">
-                <a href="#" class="support-tool-card">
-                    <div class="tool-icon">🔑</div>
-                    <div class="tool-title">Reset Password</div>
-                    <div class="tool-desc">Forgot your Nexus ID password? Reset it here.</div>
-                </a>
-                <a href="#" class="support-tool-card">
-                    <div class="tool-icon">🛡️</div>
-                    <div class="tool-title">Check Coverage</div>
-                    <div class="tool-desc">Check your warranty status and Nexus Care eligibility.</div>
-                </a>
-                <a href="#" class="support-tool-card">
-                    <div class="tool-icon">💳</div>
-                    <div class="tool-title">Billing</div>
-                    <div class="tool-desc">Update payment methods and check purchase history.</div>
-                </a>
             </div>
-        </div>
+        </section>
 
-        <!-- CONTACT BANNER -->
-        <div class="contact-banner">
-            <div class="contact-content">
-                <h2 class="contact-title">Get Support</h2>
-                <p class="contact-subtitle">Need more help? Chat with a Nexus Expert or schedule a repair.</p>
-                <div style="display: flex; gap: 16px;">
-                    <a href="#" class="btn btn-pill">Start now</a>
-                    <a href="#" class="btn btn-pill" style="background-color: #e8e8ed; color: #1d1d1f;">Download the
-                        app</a>
+        <!-- CONTACT SECTION -->
+        <section class="support-contact-section">
+            <div class="container">
+                <div class="support-contact-card">
+                    <div class="contact-info">
+                        <h2>Need more help?</h2>
+                        <p>Get in touch with our support team. We're available 24/7 to help you.</p>
+                        <div class="contact-buttons">
+                            <a href="#" class="btn btn-pill">Chat with us</a>
+                            <a href="#" class="btn btn-pill-light">Call support</a>
+                        </div>
+                    </div>
+                    <div class="contact-visual">
+                        <div class="contact-icon-circle">
+                            <span>💬</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="contact-image">
-                <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Contact Support"
-                    style="height: 120px; object-fit: contain;">
-            </div>
-        </div>
+        </section>
 
     </main>
 
