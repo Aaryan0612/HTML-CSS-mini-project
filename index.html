@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Use Inter with tight tracking for that crisp Apple look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- MEGA MENU NAVIGATION -->
     <nav class="navbar">
         <div class="container nav-content">
@@ -75,79 +73,404 @@
         </div>
     </nav>
 
-    <main style="    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;">
-        <!-- HERO SECTION -->
-        <section class="apple-section text-center" style="padding:0;padding-top: 140px; padding-bottom: 60px; max-width: 100%;">
-            <div class="container">
-                <div style="padding: 150px;">
-
-                    <h1 class="apple-hero-text">NEXUS Series 7</h1>
-                    <p class="apple-subhead">Precision in Motion.</p>
-    
-                    <div style="margin-bottom: 50px; display: flex; gap: 16px; justify-content: center; align-items: center;">
-                        <a href="watches.html" class="btn btn-pill">Shop Series 7</a>
-                        <a href="watch-detail.html" class="link-arrow" style="font-size: 17px;">Learn more ></a>
+    <main>
+        <!-- ===================== HERO CAROUSEL SECTION ===================== -->
+        <section class="hero-carousel-section">
+            <div class="hero-carousel">
+                <div class="hero-slides" id="heroSlides">
+                    <!-- Slide 1: Watch -->
+                    <div class="hero-slide active" data-slide="0">
+                        <div class="hero-slide-content">
+                            <h1 class="hero-title">NEXUS Series 7</h1>
+                            <p class="hero-subtitle">Precision in Motion.</p>
+                            <div class="hero-buttons">
+                                <a href="watches.html" class="btn btn-pill">Shop Series 7</a>
+                                <a href="watch-detail.html" class="link-arrow">Learn more ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Audio -->
+                    <div class="hero-slide" data-slide="1">
+                        <div class="hero-slide-content">
+                            <h1 class="hero-title">NEXUS Audio</h1>
+                            <p class="hero-subtitle">Sound Redefined.</p>
+                            <div class="hero-buttons">
+                                <a href="audio.html" class="btn btn-pill">Shop Audio</a>
+                                <a href="audio.html" class="link-arrow">Learn more ></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Carousel Navigation Dots -->
+                <div class="hero-dots">
+                    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </section>
 
-                <div class="hero-image-wrapper" style="width: 100vw; background: #fffcf7; flex-direction: row; display: flex;">
-                    <img src="images/products/product_leather_brown_1769971158203.png" alt="Nexus Series 7" style="max-width: 600px; width: 100%; height: auto;">
-                    <div style="display: flex; justify-content: center; flex-direction: column; align-items: start; padding: 20px 40px; gap: 10px;">
+        <!-- ===================== FEATURED WATCH SHOWCASE ===================== -->
+        <section class="featured-showcase">
+            <div class="showcase-image-wrapper">
+                <img src="images/products/product_leather_brown_1769971158203.png" alt="Leather Gold Series Watch"
+                    class="showcase-image">
+            </div>
+            <div class="showcase-content">
+                <span class="showcase-label">The All New</span>
+                <h2 class="showcase-title">Leather Gold Series</h2>
+                <p class="showcase-description">Crafted with premium leather and gold accents for timeless elegance.</p>
+                <div class="showcase-buttons">
+                    <a href="watch-detail.html" class="btn btn-pill">Shop Now</a>
+                    <a href="watch-detail.html" class="link-arrow">Learn more ></a>
+                </div>
+            </div>
+        </section>
 
-                        <h1>The All New </h1>
-                        <h1 class="apple-hero-text">Leather Gold Series</h1>
+        <!-- ===================== FEATURED AUDIO SHOWCASE ===================== -->
+        <section class="featured-showcase featured-showcase-reversed">
+            <div class="showcase-content">
+                <span class="showcase-label">Introducing</span>
+                <h2 class="showcase-title">Nexus Studio</h2>
+                <p class="showcase-description">The ultimate over-ear listening experience with bold sound and premium
+                    comfort.</p>
+                <div class="showcase-buttons">
+                    <a href="audio.html" class="btn btn-pill">Shop Now</a>
+                    <a href="audio.html" class="link-arrow">Learn more ></a>
+                </div>
+            </div>
+            <div class="showcase-image-wrapper showcase-image-audio">
+                <img src="images/products/nexus_studio_silver_1769974506326.png" alt="Nexus Studio Headphones"
+                    class="showcase-image">
+            </div>
+        </section>
+
+        <!-- ===================== NEXUS WATCH COLLECTION ===================== -->
+        <section class="product-collection-section">
+            <div class="container">
+                <div class="collection-header">
+                    <h2 class="collection-title">Nexus Watch.</h2>
+                    <a href="watches.html" class="link-arrow">Show more</a>
+                </div>
+                <p class="collection-subtitle">All models. <span class="text-muted">Take your pick.</span></p>
+
+                <div class="product-collection-grid" id="watchCollection">
+                    <!-- Watch 1: Black Beast -->
+                    <div class="product-card-interactive" data-product="nexus-series-10" data-category="watches">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/product_sport_black_1769971143091.png" alt="Black Beast Watch"
+                                class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-series-10')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Black Beast</h3>
+                            <p class="product-card-tagline">Nexus Watch Series 10</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #1d1d1f;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹46,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-series-10'); return false;">Buy</a>
+                        </div>
+                    </div>
+
+                    <!-- Watch 2: Silver Standard -->
+                    <div class="product-card-interactive" data-product="nexus-ultra-2" data-category="watches">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/product_steel_silver_1769971174728.png"
+                                alt="Silver Standard Watch" class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-ultra-2')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Silver Standard</h3>
+                            <p class="product-card-tagline">Nexus Watch Ultra 2</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #c4c4c4;"></span>
+                                <span class="swatch" style="background: #1d1d1f;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹89,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-ultra-2'); return false;">Buy</a>
+                        </div>
+                    </div>
+
+                    <!-- Watch 3: Leather Gold -->
+                    <div class="product-card-interactive" data-product="nexus-se-3" data-category="watches">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/product_leather_brown_1769971158203.png" alt="Leather Gold Watch"
+                                class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-se-3')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Leather Gold</h3>
+                            <p class="product-card-tagline">Nexus Watch SE 3</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #8B5E3C;"></span>
+                                <span class="swatch" style="background: #1d1d1f;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹25,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-se-3'); return false;">Buy</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GET TO KNOW NEXUS WATCH -->
-        <section class="apple-section">
+        <!-- ===================== NEXUS AUDIO COLLECTION ===================== -->
+        <section class="product-collection-section bg-apple-gray">
             <div class="container">
-                <h2 style="font-size: 56px; margin-bottom: 80px; text-align: left; margin-top: 0;">Nexus Watch.</h2>
+                <div class="collection-header">
+                    <h2 class="collection-title">Nexus Audio.</h2>
+                    <a href="audio.html" class="link-arrow">Show more</a>
+                </div>
+                <p class="collection-subtitle">Immersive sound. <span class="text-muted">Your choice.</span></p>
 
-                <div style="width: 100%; display: flex; flex-direction: row; justify-content: end; margin-bottom: 15px; padding: 20px; cursor: pointer;">Show more </div>
-                <div class="bento-card-flex">
+                <div class="product-collection-grid" id="audioCollection">
+                    <!-- Audio 1: Nexus Buds -->
+                    <div class="product-card-interactive" data-product="nexus-buds" data-category="audio">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/nexus_buds_standard_1769974540541.png" alt="Nexus Buds"
+                                class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-buds')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Nexus Buds</h3>
+                            <p class="product-card-tagline">Incredible sound. Open fit.</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹12,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-buds'); return false;">Buy</a>
+                        </div>
+                    </div>
 
-                    <!-- Card 1: HEALTH -->
-                     <div class="card">
+                    <!-- Audio 2: Nexus Buds Pro -->
+                    <div class="product-card-interactive" data-product="nexus-buds-pro" data-category="audio">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/nexus_buds_pro_1769974523745.png" alt="Nexus Buds Pro"
+                                class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-buds-pro')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Nexus Buds Pro 2</h3>
+                            <p class="product-card-tagline">Active Noise Cancellation.</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                                <span class="swatch" style="background: #1d1d1f;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹24,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-buds-pro'); return false;">Buy</a>
+                        </div>
+                    </div>
 
-                         <div class="card-vertical">
-                             <div class="card-headline" style="padding: 30px; position: absolute;">Black Beast</div>
-                             <img src="images/products/product_sport_black_1769971143091.png" class="card-image-bottom"
-                                 style="object-fit: contain;">
-                         </div>
-                     </div>
-
-                    <!-- Card 1: HEALTH -->
-                     <div class="card">
-
-                         <div class="card-vertical">
-                             <div class="card-headline" style="padding: 30px; position: absolute;">Silver Standard</div>
-                             <img src="images/products/product_steel_silver_1769971174728.png" class="card-image-bottom"
-                                 style="object-fit: contain;">
-                         </div>
-                     </div>
-                     <div class="card">
-
-                         <div class="card-vertical">
-                             <div class="card-headline" style="padding: 30px; position: absolute;">Leather Gold</div>
-                             <img src="images/products/product_leather_brown_1769971158203.png" class="card-image-bottom"
-                                 style="object-fit: contain;">
-                         </div>
-                     </div>
+                    <!-- Audio 3: Nexus Studio -->
+                    <div class="product-card-interactive" data-product="nexus-studio" data-category="audio">
+                        <div class="product-card-image-wrapper">
+                            <img src="images/products/nexus_studio_silver_1769974506326.png" alt="Nexus Studio"
+                                class="product-card-image">
+                            <div class="product-hover-overlay">
+                                <button class="btn-closer-look" onclick="openProductModal('nexus-studio')">
+                                    Take a closer look
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="product-card-name">Nexus Studio</h3>
+                            <p class="product-card-tagline">Ultimate over-ear experience.</p>
+                            <div class="product-card-swatches">
+                                <span class="swatch" style="background: #c4c4c4;"></span>
+                                <span class="swatch" style="background: #1d1d1f;"></span>
+                                <span class="swatch" style="background: #0071e3;"></span>
+                            </div>
+                            <p class="product-card-price">From ₹54,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('nexus-studio'); return false;">Buy</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- LIFESTYLE / FITNESS+ -->
+        <!-- ===================== NEXUS ACCESSORIES SECTION ===================== -->
+        <section class="product-collection-section">
+            <div class="container">
+                <div class="collection-header">
+                    <h2 class="collection-title">Accessories.</h2>
+                    <a href="accessories.html" class="link-arrow">Shop all</a>
+                </div>
+                <p class="collection-subtitle">Complete your look. <span class="text-muted">Find the perfect
+                        match.</span></p>
+
+                <div class="accessories-grid">
+                    <!-- Accessory 1: Sport Loop -->
+                    <div class="accessory-card">
+                        <div class="accessory-image-wrapper">
+                            <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Sport Loop Band"
+                                class="accessory-image">
+                        </div>
+                        <div class="accessory-info">
+                            <div class="accessory-swatches">
+                                <span class="swatch" style="background: #4a4a4a;"></span>
+                                <span class="swatch" style="background: #f0c929;"></span>
+                                <span class="swatch" style="background: #6b2e6b;"></span>
+                            </div>
+                            <h3 class="accessory-name">Sport Loop</h3>
+                            <p class="accessory-price">₹4,900</p>
+                        </div>
+                    </div>
+
+                    <!-- Accessory 2: Braided Solo Loop -->
+                    <div class="accessory-card">
+                        <div class="accessory-image-wrapper">
+                            <img src="images/products/band_braided_solo_watch_1769975933904.png" alt="Braided Solo Loop"
+                                class="accessory-image">
+                        </div>
+                        <div class="accessory-info">
+                            <span class="accessory-tag">New</span>
+                            <h3 class="accessory-name">Braided Solo Loop</h3>
+                            <p class="accessory-price">₹9,900</p>
+                        </div>
+                    </div>
+
+                    <!-- Accessory 3: Milanese Loop -->
+                    <div class="accessory-card">
+                        <div class="accessory-image-wrapper">
+                            <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Milanese Loop"
+                                class="accessory-image">
+                        </div>
+                        <div class="accessory-info">
+                            <h3 class="accessory-name">Milanese Loop</h3>
+                            <p class="accessory-price">₹9,900</p>
+                        </div>
+                    </div>
+
+                    <!-- Accessory 4: Fast Charger -->
+                    <div class="accessory-card">
+                        <div class="accessory-image-wrapper">
+                            <img src="images/products/watch_charger_fast_1769975962427.png" alt="Fast Charger"
+                                class="accessory-image">
+                        </div>
+                        <div class="accessory-info">
+                            <h3 class="accessory-name">Magnetic Fast Charger</h3>
+                            <p class="accessory-price">₹2,900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TESTIMONIALS SECTION ===================== -->
+        <section class="testimonials-section">
+            <!-- Hero Banner -->
+            <div class="testimonials-hero">
+                <div class="testimonials-hero-overlay"></div>
+                <div class="testimonials-hero-content">
+                    <h2 class="testimonials-heading">STORIES</h2>
+                    <p class="testimonials-tagline">See how we connect<br>people to their passions.</p>
+                    <a href="#" class="btn btn-outline-white">Learn more</a>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="container">
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">The Nexus Watch has completely transformed how I track my workouts.
+                            The accuracy is incredible and the design is stunning.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Aaryan Kumar</h4>
+                                <p class="author-title">Fitness Enthusiast</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Nexus Studio headphones deliver sound quality that rivals anything
+                            on the market. The noise cancellation is a game-changer for my work.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PM</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Priya Mehta</h4>
+                                <p class="author-title">Music Producer</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">The Ultra 2 survived my Himalayan trek without a scratch. Best
+                            investment I've made for my adventures.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RS</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Rahul Singh</h4>
+                                <p class="author-title">Mountain Climber</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Seamless integration with all my devices. The ecosystem just works
+                            beautifully. Can't imagine life without it now.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">NJ</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Neha Joshi</h4>
+                                <p class="author-title">Tech Enthusiast</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <span>★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== LIFESTYLE POSTERS ===================== -->
         <section class="apple-section" style="padding-top: 0;">
             <div class="container">
                 <div class="poster-grid">
-
                     <!-- YOGA POSTER -->
                     <div class="card-poster">
                         <img src="images/hero/lifestyle_yoga_1769972907821.png">
@@ -166,12 +489,66 @@
                             <button class="btn btn-pill btn-white">Try it free</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
     </main>
+
+    <!-- ===================== PRODUCT MODAL ===================== -->
+    <div class="product-modal-overlay" id="productModal">
+        <div class="product-modal">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Close modal">&times;</button>
+
+            <!-- Modal Tabs -->
+            <div class="modal-tabs" id="modalTabs">
+                <!-- Tabs will be populated by JavaScript -->
+            </div>
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="modal-image-section">
+                    <img src="" alt="" class="modal-product-image" id="modalProductImage">
+                    <div class="modal-image-dots" id="modalImageDots">
+                        <!-- Image dots for carousel -->
+                    </div>
+                    <p class="modal-finishes" id="modalFinishes">Available in 2 finishes</p>
+                    <div class="modal-color-swatches" id="modalSwatches">
+                        <!-- Color swatches -->
+                    </div>
+                </div>
+                <div class="modal-info-section">
+                    <h2 class="modal-product-name" id="modalProductName">Product Name</h2>
+                    <p class="modal-product-pricing" id="modalProductPricing">From ₹00,000</p>
+                    <button class="btn btn-pill modal-buy-btn" id="modalBuyBtn">Buy</button>
+
+                    <ul class="modal-features-list" id="modalFeatures">
+                        <!-- Features list -->
+                    </ul>
+
+                    <a href="#" class="link-arrow modal-explore-link" id="modalExploreLink">Explore further ></a>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <div class="modal-footer-item">
+                    <span class="modal-footer-icon">💳</span>
+                    <div>
+                        <strong>Flexible ways to pay</strong>
+                        <p>No Cost EMI and EMI available.</p>
+                    </div>
+                </div>
+                <div class="modal-footer-item">
+                    <span class="modal-footer-icon">🚚</span>
+                    <div>
+                        <strong>Free Delivery</strong>
+                        <p>Get free delivery direct to your door.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
