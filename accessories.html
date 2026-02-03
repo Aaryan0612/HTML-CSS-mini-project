@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS | Watch Accessories</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
 
                 <!-- WATCHES DROP -->
                 <div class="nav-item">
-                    <a href="watches.html" class="nav-link" style="opacity: 1;">Watches</a>
+                    <a href="watches.html" class="nav-link">Watches</a>
                     <div class="nav-dropdown">
                         <div class="dropdown-grid">
                             <div class="dropdown-col">
@@ -52,17 +52,17 @@
                             <div class="dropdown-col">
                                 <h4>Explore Audio</h4>
                                 <ul>
-                                    <li><a href="audio.html">Nexus Studio</a></li>
-                                    <li><a href="audio.html">Nexus Buds Pro</a></li>
-                                    <li><a href="audio.html">Nexus Buds</a></li>
+                                    <li><a href="audio-studio.html">Nexus Studio</a></li>
+                                    <li><a href="audio-buds-pro.html">Nexus Buds Pro</a></li>
+                                    <li><a href="audio-buds.html">Nexus Buds</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-col small-text">
                                 <h4>Shop Audio</h4>
                                 <ul>
                                     <li><a href="audio.html">Shop All</a></li>
-                                    <li><a href="audio.html">Home Speaker</a></li>
-                                    <li><a href="audio.html">Music</a></li>
+                                    <li><a href="accessories.html">Accessories</a></li>
+                                    <li><a href="cart.html">NEXUS Care+</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -75,155 +75,214 @@
         </div>
     </nav>
 
-    <main class="bg-apple-gray">
+    <main>
 
-        <!-- HEADER -->
-        <section class="container" style="padding-top: 120px; padding-bottom: 60px;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-                <h1 style="font-size: 40px; font-weight: 600;">Nexus Watch Accessories</h1>
-                <a href="#" class="link-arrow" style="font-size: 14px;">Browse all ⌄</a>
-            </div>
-        </section>
-
-        <!-- BANNER -->
-        <section class="bg-apple-gray" style="padding: 80px 0; overflow: hidden;">
-            <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-                <div style="max-width: 400px;">
-                    <h2 style="font-size: 56px; line-height: 1.1; margin-bottom: 24px;">Just your style.</h2>
-                    <p style="font-size: 21px; color: #1d1d1f; margin-bottom: 32px;">Clock the latest collection
-                        of<br>Nexus Watch straps.</p>
-                    <a href="#" class="link-arrow" style="font-size: 17px;">Shop all Watch straps ></a>
-                </div>
-                <!-- Collage of bands (Using one large visual for now effectively) -->
-                <img src="images/products/band_braided_solo_watch_1769975933904.png"
-                    style="height: 400px; transform: rotate(-15deg); filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
-            </div>
-        </section>
-
-        <!-- FEATURED STRAPS (2 Col) -->
-        <section style="padding: 60px 0;">
+        <!-- ===================== HERO SECTION ===================== -->
+        <section class="accessories-hero">
             <div class="container">
-                <h2 style="font-size: 28px; margin-bottom: 32px;">Featured Watch Accessories</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                <div class="accessories-hero-grid">
+                    <div class="accessories-hero-content">
+                        <h1 class="accessories-hero-title">Just your style.</h1>
+                        <p class="accessories-hero-subtitle">Clock the latest collection of Nexus Watch straps and
+                            accessories.</p>
+                        <a href="#featured" class="link-arrow">Shop all accessories ></a>
+                    </div>
+                    <div class="accessories-hero-image">
+                        <img src="images/products/band_braided_solo_watch_1769975933904.png" alt="Braided Solo Loop">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ===================== FEATURED ACCESSORIES ===================== -->
+        <section class="accessories-featured" id="featured">
+            <div class="container">
+                <h2 class="accessories-section-heading">Featured Watch Accessories</h2>
+
+                <div class="accessories-featured-grid">
                     <!-- Card 1: Sport Loop -->
-                    <div class="bento-card-light"
-                        style="height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-bottom: 60px;">
-                        <img src="images/products/band_sport_loop_trio_1769975915434.png"
-                            style="height: 300px; margin-top: 40px;">
-                        <div class="text-center">
-                            <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px;">
-                                <span
-                                    style="width: 12px; height: 12px; border-radius: 50%; background: #4a4a4a; display: block;"></span>
-                                <span
-                                    style="width: 12px; height: 12px; border-radius: 50%; background: #f0c929; display: block;"></span>
-                                <span
-                                    style="width: 12px; height: 12px; border-radius: 50%; background: #6b2e6b; display: block;"></span>
+                    <div class="accessories-featured-card">
+                        <div class="accessories-featured-image">
+                            <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Sport Loop">
+                        </div>
+                        <div class="accessories-featured-info">
+                            <div class="accessories-color-dots">
+                                <span class="color-dot" style="background: #4a4a4a;"></span>
+                                <span class="color-dot" style="background: #f0c929;"></span>
+                                <span class="color-dot" style="background: #6b2e6b;"></span>
                             </div>
-                            <h3 style="font-size: 17px; margin-bottom: 4px;">Sport Loop</h3>
-                            <p style="font-size: 14px;">₹4,900</p>
+                            <h3 class="accessories-product-name">Sport Loop</h3>
+                            <p class="accessories-product-price">₹4,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('sport-loop'); return false;">Buy</a>
                         </div>
                     </div>
 
                     <!-- Card 2: Braided Solo Loop -->
-                    <div class="bento-card-light"
-                        style="height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-bottom: 60px;">
-                        <img src="images/products/band_braided_solo_watch_1769975933904.png"
-                            style="height: 250px; margin-top: 60px;">
-                        <div class="text-center">
-                            <h3
-                                style="font-size: 12px; color: #b64400; font-weight: 500; margin-bottom: 4px; text-transform: uppercase;">
-                                New</h3>
-                            <h3 style="font-size: 17px; margin-bottom: 4px;">Braided Solo Loop</h3>
-                            <p style="font-size: 14px;">₹9,900</p>
+                    <div class="accessories-featured-card">
+                        <div class="accessories-featured-image">
+                            <img src="images/products/band_braided_solo_watch_1769975933904.png"
+                                alt="Braided Solo Loop">
+                        </div>
+                        <div class="accessories-featured-info">
+                            <span class="accessories-product-tag">New</span>
+                            <h3 class="accessories-product-name">Braided Solo Loop</h3>
+                            <p class="accessories-product-price">₹9,900</p>
+                            <a href="#" class="btn btn-pill btn-pill-small"
+                                onclick="addToCart('braided-solo-loop'); return false;">Buy</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- STRAP COLLECTION (3 Col) -->
-        <section style="padding: 0 0 80px;">
+        <!-- ===================== STRAPS COLLECTION ===================== -->
+        <section class="accessories-collection">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-
-                    <!-- Col 1: Sport Band -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; padding: 40px;">
-                        <img src="images/products/band_sport_loop_trio_1769975915434.png"
-                            style="height: 200px; object-fit: cover; width: 100px; margin-bottom: 30px;">
-                        <h3 style="font-size: 17px; margin-bottom: 4px;">Sport Band</h3>
-                        <p style="font-size: 14px; color: #86868b;">₹4,900</p>
-                    </div>
-
-                    <!-- Col 2: Nike Sport Loop -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; padding: 40px;">
-                        <img src="images/products/band_sport_loop_trio_1769975915434.png"
-                            style="height: 200px; object-fit: cover; width: 100px; margin-bottom: 30px; filter: hue-rotate(180deg);">
-                        <h3 style="font-size: 17px; margin-bottom: 4px;">Nexus Sport Loop</h3>
-                        <p style="font-size: 14px; color: #86868b;">₹4,900</p>
-                    </div>
-
-                    <!-- Col 3: Milanese Loop -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; padding: 40px;">
-                        <img src="images/products/band_milanese_loop_trio_1769975947795.png"
-                            style="height: 200px; margin-bottom: 30px;">
-                        <h3 style="font-size: 17px; margin-bottom: 4px;">Milanese Loop</h3>
-                        <p style="font-size: 14px; color: #86868b;">₹9,900</p>
-                    </div>
+                <div class="accessories-section-header">
+                    <h2 class="accessories-section-heading">Watch Straps</h2>
+                    <a href="#" class="link-arrow">Shop all straps ></a>
                 </div>
-                <div class="text-center" style="margin-top: 40px;">
-                    <a href="#" class="link-arrow">Shop all Watch straps ></a>
+
+                <div class="accessories-grid">
+                    <!-- Sport Band -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Sport Band">
+                        </div>
+                        <h3 class="accessories-card-name">Sport Band</h3>
+                        <p class="accessories-card-price">₹4,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('sport-band'); return false;">Buy</a>
+                    </div>
+
+                    <!-- Nexus Sport Loop -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Nexus Sport Loop"
+                                class="hue-shift">
+                        </div>
+                        <h3 class="accessories-card-name">Nexus Sport Loop</h3>
+                        <p class="accessories-card-price">₹4,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('nexus-sport-loop'); return false;">Buy</a>
+                    </div>
+
+                    <!-- Milanese Loop -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Milanese Loop">
+                        </div>
+                        <h3 class="accessories-card-name">Milanese Loop</h3>
+                        <p class="accessories-card-price">₹9,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('milanese-loop'); return false;">Buy</a>
+                    </div>
+
+                    <!-- Link Bracelet -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_milanese_loop_trio_1769975947795.png" alt="Link Bracelet"
+                                class="grayscale">
+                        </div>
+                        <h3 class="accessories-card-name">Link Bracelet</h3>
+                        <p class="accessories-card-price">₹34,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('link-bracelet'); return false;">Buy</a>
+                    </div>
+
+                    <!-- Leather Link -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_braided_solo_watch_1769975933904.png" alt="Leather Link"
+                                class="sepia">
+                        </div>
+                        <h3 class="accessories-card-name">Leather Link</h3>
+                        <p class="accessories-card-price">₹14,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('leather-link'); return false;">Buy</a>
+                    </div>
+
+                    <!-- Ocean Band -->
+                    <div class="accessories-card">
+                        <div class="accessories-card-image">
+                            <img src="images/products/band_sport_loop_trio_1769975915434.png" alt="Ocean Band"
+                                class="saturate">
+                        </div>
+                        <h3 class="accessories-card-name">Ocean Band</h3>
+                        <p class="accessories-card-price">₹8,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('ocean-band'); return false;">Buy</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ESSENTIALS (Chargers) -->
-        <section style="padding: 60px 0 100px;">
+        <!-- ===================== WATCH ESSENTIALS ===================== -->
+        <section class="accessories-essentials">
             <div class="container">
-                <h2 style="font-size: 28px; margin-bottom: 32px; text-align: center;">Watch Essentials</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <h2 class="accessories-section-heading text-center">Watch Essentials</h2>
+                <p class="accessories-section-subhead text-center">Power up. Stay charged. <span
+                        class="text-muted">Everything you need.</span></p>
 
-                    <!-- Item 1: Adapter -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
-                        <img src="images/products/watch_charger_fast_1769975962427.png"
-                            style="height: 150px; margin-bottom: 30px;">
-                        <div class="text-center">
-                            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 4px; max-width: 200px;">35W
-                                Dual USB-C Port Power Adapter</h3>
-                            <p style="font-size: 14px; color: #1d1d1f; margin-top: 8px;">₹5,900</p>
+                <div class="accessories-essentials-grid">
+                    <!-- Power Adapter -->
+                    <div class="accessories-essential-card">
+                        <div class="accessories-essential-image">
+                            <img src="images/products/watch_charger_fast_1769975962427.png"
+                                alt="35W Dual USB-C Adapter">
                         </div>
+                        <h3 class="accessories-essential-name">35W Dual USB-C Port Power Adapter</h3>
+                        <p class="accessories-essential-price">₹5,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('power-adapter-35w'); return false;">Buy</a>
                     </div>
 
-                    <!-- Item 2: Cable -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
-                        <img src="images/products/watch_charger_fast_1769975962427.png"
-                            style="height: 150px; margin-bottom: 30px;">
-                        <div class="text-center">
-                            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 4px; max-width: 200px;">Nexus
-                                Watch Magnetic Fast Charger to USB-C</h3>
-                            <p style="font-size: 14px; color: #1d1d1f; margin-top: 8px;">₹2,900</p>
+                    <!-- Magnetic Charger -->
+                    <div class="accessories-essential-card">
+                        <div class="accessories-essential-image">
+                            <img src="images/products/watch_charger_fast_1769975962427.png" alt="Magnetic Fast Charger">
                         </div>
+                        <h3 class="accessories-essential-name">Nexus Watch Magnetic Fast Charger to USB-C</h3>
+                        <p class="accessories-essential-price">₹2,900</p>
+                        <a href="#" class="btn btn-pill btn-pill-small"
+                            onclick="addToCart('magnetic-charger'); return false;">Buy</a>
                     </div>
 
-                    <!-- Item 3: AirPods Pro (Cross-sell) -->
-                    <div class="bento-card-light"
-                        style="height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
-                        <img src="images/products/nexus_buds_pro_1769974523745.png"
-                            style="height: 120px; margin-bottom: 40px;">
-                        <div class="text-center">
-                            <h3 style="font-size: 12px; color: #b64400; font-weight: 500; margin-bottom: 4px;">Free
-                                Engraving</h3>
-                            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 4px;">Nexus Buds Pro</h3>
-                            <p style="font-size: 14px; color: #1d1d1f; margin-top: 8px;">₹24,900</p>
+                    <!-- Nexus Buds Pro Cross-sell -->
+                    <div class="accessories-essential-card accessories-cross-sell">
+                        <span class="accessories-product-tag">Free Engraving</span>
+                        <div class="accessories-essential-image">
+                            <img src="images/products/nexus_buds_pro_1769974523745.png" alt="Nexus Buds Pro">
                         </div>
+                        <h3 class="accessories-essential-name">Nexus Buds Pro 2</h3>
+                        <p class="accessories-essential-price">₹24,900</p>
+                        <a href="audio-buds-pro.html" class="link-arrow">Learn more ></a>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ===================== EXPLORE MORE ===================== -->
+        <section class="accessories-explore">
+            <div class="container">
+                <h2 class="accessories-section-heading text-center">Explore more NEXUS.</h2>
+                <div class="accessories-explore-grid">
+                    <a href="watches.html" class="accessories-explore-card">
+                        <div class="accessories-explore-icon">⌚</div>
+                        <h3>NEXUS Watch</h3>
+                        <p>Explore all models</p>
+                    </a>
+                    <a href="audio.html" class="accessories-explore-card">
+                        <div class="accessories-explore-icon">🎧</div>
+                        <h3>NEXUS Audio</h3>
+                        <p>Premium sound</p>
+                    </a>
+                    <a href="support.html" class="accessories-explore-card">
+                        <div class="accessories-explore-icon">💬</div>
+                        <h3>Get Support</h3>
+                        <p>We're here to help</p>
+                    </a>
                 </div>
             </div>
         </section>
