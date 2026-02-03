@@ -1,136 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXUS | Your Bag</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- MEGA MENU NAVIGATION -->
     <nav class="navbar">
-        <div class="container nav-content">
-            <a href="index.html" class="brand">NEXUS</a>
-            <div class="nav-links">
-                <div class="nav-item">
-                    <a href="watches.html" class="nav-link">Watches</a>
-                    <div class="nav-dropdown">
-                        <div class="dropdown-grid">
-                            <div class="dropdown-col">
-                                <h4>Explore Watches</h4>
-                                <ul>
-                                    <li><a href="watches.html">NEXUS Ultra</a></li>
-                                    <li><a href="watches.html">NEXUS Sport</a></li>
-                                    <li><a href="watches.html">NEXUS Heritage</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col small-text">
-                                <h4>Shop Watches</h4>
-                                <ul>
-                                    <li><a href="watches.html">Shop All</a></li>
-                                    <li><a href="accessories.html">Accessories</a></li>
-                                    <li><a href="cart.html">NEXUS Care+</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container nav-content">
+        <a href="index.html" class="brand">NEXUS</a>
+        <div class="nav-links">
+          <div class="nav-item">
+            <a href="watches.html" class="nav-link">Watches</a>
+            <div class="nav-dropdown">
+              <div class="dropdown-grid">
+                <div class="dropdown-col">
+                  <h4>Explore Watches</h4>
+                  <ul>
+                    <li><a href="watches.html">NEXUS Ultra</a></li>
+                    <li><a href="watches.html">NEXUS Sport</a></li>
+                    <li><a href="watches.html">NEXUS Heritage</a></li>
+                  </ul>
                 </div>
-
-                <div class="nav-item">
-                    <a href="audio.html" class="nav-link">Audio</a>
-                    <div class="nav-dropdown">
-                        <div class="dropdown-grid">
-                            <div class="dropdown-col">
-                                <h4>Explore Audio</h4>
-                                <ul>
-                                    <li><a href="audio.html">Nexus Studio</a></li>
-                                    <li><a href="audio.html">Nexus Buds Pro</a></li>
-                                    <li><a href="audio.html">Nexus Buds</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-col small-text">
-                                <h4>Shop Audio</h4>
-                                <ul>
-                                    <li><a href="audio.html">Shop All</a></li>
-                                    <li><a href="audio.html">Home Speaker</a></li>
-                                    <li><a href="audio.html">Music</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="dropdown-col small-text">
+                  <h4>Shop Watches</h4>
+                  <ul>
+                    <li><a href="watches.html">Shop All</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="cart.html">NEXUS Care+</a></li>
+                  </ul>
                 </div>
-
-                <div class="nav-item"><a href="support.html" class="nav-link">Support</a></div>
-                <div class="nav-item"><a href="cart.html" class="nav-link" style="opacity: 1;">Cart (0)</a></div>
+              </div>
             </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="audio.html" class="nav-link">Audio</a>
+            <div class="nav-dropdown">
+              <div class="dropdown-grid">
+                <div class="dropdown-col">
+                  <h4>Explore Audio</h4>
+                  <ul>
+                    <li><a href="audio.html">Nexus Studio</a></li>
+                    <li><a href="audio.html">Nexus Buds Pro</a></li>
+                    <li><a href="audio.html">Nexus Buds</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown-col small-text">
+                  <h4>Shop Audio</h4>
+                  <ul>
+                    <li><a href="audio.html">Shop All</a></li>
+                    <li><a href="audio.html">Home Speaker</a></li>
+                    <li><a href="audio.html">Music</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="support.html" class="nav-link">Support</a>
+          </div>
+          <div class="nav-item">
+            <a href="cart.html" class="nav-link" style="opacity: 1">Cart (0)</a>
+          </div>
         </div>
+      </div>
     </nav>
 
     <main class="padding-top-nav">
-        <div class="cart-page-container">
+      <div class="cart-page-container">
+        <h1 class="cart-page-title">Your Bag</h1>
 
-            <h1 class="cart-page-title">Your Bag</h1>
-
-            <!-- Empty Cart State -->
-            <div id="cart-empty" class="cart-empty" style="display: none;">
-                <div class="empty-icon">🛒</div>
-                <h2>Your bag is empty</h2>
-                <p>Looks like you haven't added anything to your bag yet.</p>
-                <a href="watches.html" class="btn btn-pill">Shop Now</a>
-            </div>
-
-            <div class="cart-layout">
-                <!-- Left: Cart Items (Dynamic) -->
-                <div id="cart-items-container" class="cart-items">
-                    <!-- Items rendered by JavaScript -->
-                </div>
-
-                <!-- Right: Summary -->
-                <aside class="cart-summary">
-                    <h3 class="summary-title">Order Summary</h3>
-
-                    <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span id="summary-subtotal">₹0</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Shipping</span>
-                        <span class="free-shipping">FREE</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Estimated Tax</span>
-                        <span>Included</span>
-                    </div>
-
-                    <div class="summary-row total-row">
-                        <span>Total</span>
-                        <span id="summary-total">₹0</span>
-                    </div>
-
-                    <button class="btn btn-pill checkout-btn">Checkout</button>
-
-                    <div class="checkout-note">
-                        <p>Free delivery on all orders</p>
-                        <p>30-day return policy</p>
-                    </div>
-                </aside>
-            </div>
+        <!-- Empty Cart State -->
+        <div id="cart-empty" class="cart-empty" style="display: none">
+          <div class="empty-icon">🛒</div>
+          <h2>Your bag is empty</h2>
+          <p>Looks like you haven't added anything to your bag yet.</p>
+          <a href="watches.html" class="btn btn-pill">Shop Now</a>
         </div>
+
+        <div class="cart-layout">
+          <!-- Left: Cart Items (Dynamic) -->
+          <div id="cart-items-container" class="cart-items">
+            <!-- Items rendered by JavaScript -->
+          </div>
+
+          <!-- Right: Summary -->
+          <aside class="cart-summary">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summary-subtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span class="free-shipping">FREE</span>
+            </div>
+            <div class="summary-row">
+              <span>Estimated Tax</span>
+              <span>Included</span>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <span id="summary-total">₹0</span>
+            </div>
+
+            <button class="btn btn-pill checkout-btn">Checkout</button>
+
+            <div class="checkout-note">
+              <p>Free delivery on all orders</p>
+              <p>30-day return policy</p>
+            </div>
+          </aside>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2026 NEXUS Wearables. Designed for Academic Excellence.</p>
+      </div>
     </footer>
 
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

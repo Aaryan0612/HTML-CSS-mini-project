@@ -1,16 +1,16 @@
 /* STYLE.CSS - Main Stylsheet */
-@import 'reset.css';
-@import 'variables.css';
+@import "reset.css";
+@import "variables.css";
 
 /* --- BASE --- */
 body {
-    font-family: var(--font-main);
-    background-color: var(--color-bg-body);
-    color: var(--color-text-primary);
-    font-size: var(--text-body);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+  font-family: var(--font-main);
+  background-color: var(--color-bg-body);
+  color: var(--color-text-primary);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -20,440 +20,440 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #1d1d1f;
-    /* Apple Black */
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+  /* Apple Black */
 }
 
 /* --- UTILITIES --- */
 .container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--space-4);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* --- BUTTONS --- */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    border-radius: 999px;
-    /* Pill shape */
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    text-decoration: none;
-    border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  /* Pill shape */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  border: none;
 }
 
 .btn-pill {
-    background-color: #0071e3;
-    /* Apple Blue */
-    color: white;
+  background-color: #0071e3;
+  /* Apple Blue */
+  color: white;
 }
 
 .btn-pill:hover {
-    background-color: #0077ed;
-    transform: scale(1.02);
+  background-color: #0077ed;
+  transform: scale(1.02);
 }
 
 .btn-pill-small {
-    padding: 6px 14px;
-    font-size: 12px;
-    min-width: 60px;
+  padding: 6px 14px;
+  font-size: 12px;
+  min-width: 60px;
 }
 
 .link-arrow {
-    color: #0071e3;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+  color: #0071e3;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .link-arrow:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* --- NAVIGATION --- */
 /* --- NAVIGATION EXPANDED (Mega Menu) --- */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--nav-height);
-    z-index: 1000;
-    background-color: rgba(251, 251, 253, 0.85);
-    /* Slightly more opaque base */
-    backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  background-color: rgba(251, 251, 253, 0.85);
+  /* Slightly more opaque base */
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .brand {
-    font-weight: 600;
-    font-size: 19px;
-    color: var(--color-text-primary);
-    letter-spacing: -0.02em;
-    text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
 .nav-links {
-    display: flex;
-    gap: var(--space-4);
-    height: 100%;
-    /* Important for hover target */
-    align-items: center;
+  display: flex;
+  gap: var(--space-4);
+  height: 100%;
+  /* Important for hover target */
+  align-items: center;
 }
 
 .nav-item {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
-    font-size: 12px;
-    color: var(--color-text-primary);
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-dropdown {
-    position: fixed;
-    top: var(--nav-height);
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-bottom: 1px solid var(--color-border);
-    padding: 40px 0 60px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.2s ease;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 40px 0 60px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .nav-item:hover .nav-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-grid {
-    display: flex;
-    gap: 100px;
-    max-width: var(--container-width);
-    width: 100%;
-    padding: 0 var(--space-3);
+  display: flex;
+  gap: 100px;
+  max-width: var(--container-width);
+  width: 100%;
+  padding: 0 var(--space-3);
 }
 
 .dropdown-col h4 {
-    font-size: 12px;
-    color: #86868b;
-    margin-bottom: 16px;
-    text-transform: normal;
-    font-weight: 400;
+  font-size: 12px;
+  color: #86868b;
+  margin-bottom: 16px;
+  text-transform: normal;
+  font-weight: 400;
 }
 
 .dropdown-col ul {
-    list-style: none;
+  list-style: none;
 }
 
 .dropdown-col li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .dropdown-col a {
-    font-size: 24px;
-    font-weight: 600;
-    color: #1d1d1f;
-    text-decoration: none;
-    letter-spacing: -0.01em;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
 .dropdown-col a:hover {
-    color: #000;
+  color: #000;
 }
 
 .dropdown-col.small-text a {
-    font-size: 13px;
-    font-weight: 500;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /* --- APPLE SPECIFIC AUDIO STYLES --- */
 .apple-section {
-    padding: 120px 0;
-    overflow: hidden;
+  padding: 120px 0;
+  overflow: hidden;
 }
 
 .bg-apple-gray {
-    background-color: #F5F5F7;
+  background-color: #f5f5f7;
 }
 
 .apple-hero-text {
-    font-size: 72px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    line-height: 1.05;
-    margin-bottom: 24px;
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  margin-bottom: 24px;
 }
 
 .apple-subhead {
-    font-size: 28px;
-    font-weight: 500;
-    color: #1d1d1f;
-    margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #1d1d1f;
+  margin-bottom: 40px;
 }
 
 .apple-compare-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 Products */
-    gap: 40px;
-    text-align: center;
-    border-top: 1px solid #d2d2d7;
-    padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 Products */
+  gap: 40px;
+  text-align: center;
+  border-top: 1px solid #d2d2d7;
+  padding-top: 60px;
 }
 
 .apple-compare-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .compare-img {
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 30px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 30px;
 }
 
 .compare-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .compare-desc {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #1d1d1f;
-    margin-bottom: 12px;
-    max-width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+  max-width: 200px;
 }
 
 .compare-price {
-    font-size: 14px;
-    margin-bottom: 20px;
-    font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 /* --- BENTO CARD RE-DO (Light Gray) --- */
 .bento-grid-apple {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .bento-card-light {
-    background-color: #F5F5F7;
-    border-radius: 28px;
-    padding: 30px;
-    height: 480px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: #f5f5f7;
+  border-radius: 28px;
+  padding: 30px;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bento-card-light:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .bento-text-top {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 10;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
 }
 
 .bento-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #6e6e73;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6e6e73;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .bento-head {
-    font-size: 32px;
-    font-weight: 600;
-    color: #1d1d1f;
-    line-height: 1.1;
-    max-width: 300px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1d1d1f;
+  line-height: 1.1;
+  max-width: 300px;
 }
 
 .bento-visual-bottom {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* --- FOOTER (Simplified) --- */
 footer {
-    background-color: #f5f5f7;
-    padding: 60px 0;
-    font-size: 12px;
-    color: #86868b;
+  background-color: #f5f5f7;
+  padding: 60px 0;
+  font-size: 12px;
+  color: #86868b;
 }
 
 /* --- INDEX SPECIFIC "GET TO KNOW" --- */
 .bento-vertical-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    overflow-x: auto;
-    /* Scroll on small screens */
-    padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+  /* Scroll on small screens */
+  padding-bottom: 40px;
 }
 
 .card-vertical {
-    background-color: #F5F5F7;
-    border-radius: 28px;
-    padding: 30px;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  background-color: #f5f5f7;
+  border-radius: 28px;
+  padding: 30px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .card-vertical:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .card-category {
-    font-size: 12px;
-    font-weight: 600;
-    color: #6e6e73;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e6e73;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .card-headline {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.1;
-    color: #1d1d1f;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #1d1d1f;
 }
 
 .card-image-bottom {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* --- LIFESTYLE POSTERS --- */
 .poster-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .card-poster {
-    border-radius: 28px;
-    overflow: hidden;
-    position: relative;
-    height: 600px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  height: 600px;
 }
 
 .card-poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
 .card-poster:hover img {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .poster-content {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 10;
-    max-width: 300px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  max-width: 300px;
 }
 
 .poster-content.white-text {
-    color: white;
+  color: white;
 }
 
 .poster-content.white-text .card-category {
-    color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .poster-content.white-text .card-headline {
-    color: white;
+  color: white;
 }
 
 .btn-white {
-    background-color: white;
-    color: black;
-    margin-top: 20px;
+  background-color: white;
+  color: black;
+  margin-top: 20px;
 }
 
 .btn-white:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 @media (max-width: 1068px) {
-    .bento-vertical-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .bento-vertical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .poster-grid {
-        grid-template-columns: 1fr;
-    }
+  .poster-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Keep previous cart table / support styles if needed, but this sheet overrides core */
