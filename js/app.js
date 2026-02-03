@@ -120,6 +120,128 @@ const PRODUCTS = {
             { icon: '🧲', text: 'Premium breathable knit mesh canopy' }
         ],
         link: 'audio.html'
+    },
+    // Accessories - Watch Straps
+    'sport-band': {
+        id: 'sport-band',
+        name: 'Sport Band',
+        displayName: 'Sport Band',
+        description: 'Lightweight & durable',
+        category: 'accessories',
+        price: 4900,
+        image: 'images/products/band_sport_loop_trio_1769975915434.png',
+        colors: ['#4a4a4a', '#f0c929', '#6b2e6b'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'nexus-sport-loop': {
+        id: 'nexus-sport-loop',
+        name: 'Nexus Sport Loop',
+        displayName: 'Sport Loop',
+        description: 'Soft & breathable',
+        category: 'accessories',
+        price: 4900,
+        image: 'images/products/band_sport_loop_trio_1769975915434.png',
+        colors: ['#2d5a27', '#1e3a5f', '#5a1e1e'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'milanese-loop': {
+        id: 'milanese-loop',
+        name: 'Milanese Loop',
+        displayName: 'Milanese Loop',
+        description: 'Stainless steel mesh',
+        category: 'accessories',
+        price: 9900,
+        image: 'images/products/band_milanese_loop_trio_1769975947795.png',
+        colors: ['#c4c4c4', '#1d1d1f', '#d4a574'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'link-bracelet': {
+        id: 'link-bracelet',
+        name: 'Link Bracelet',
+        displayName: 'Link Bracelet',
+        description: 'Polished stainless steel',
+        category: 'accessories',
+        price: 34900,
+        image: 'images/products/band_milanese_loop_trio_1769975947795.png',
+        colors: ['#c4c4c4', '#1d1d1f'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'leather-link': {
+        id: 'leather-link',
+        name: 'Leather Link',
+        displayName: 'Leather Link',
+        description: 'Magnetic closure',
+        category: 'accessories',
+        price: 14900,
+        image: 'images/products/band_braided_solo_watch_1769975933904.png',
+        colors: ['#8B5E3C', '#1d1d1f'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'ocean-band': {
+        id: 'ocean-band',
+        name: 'Ocean Band',
+        displayName: 'Ocean Band',
+        description: 'For extreme water sports',
+        category: 'accessories',
+        price: 8900,
+        image: 'images/products/band_sport_loop_trio_1769975915434.png',
+        colors: ['#f0c929', '#8B2252'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'braided-solo-loop': {
+        id: 'braided-solo-loop',
+        name: 'Braided Solo Loop',
+        displayName: 'Braided Solo Loop',
+        description: 'Stretchable recycled yarn',
+        category: 'accessories',
+        price: 9900,
+        image: 'images/products/band_braided_solo_watch_1769975933904.png',
+        colors: ['#4a90d9', '#2d5a27', '#f0c929'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'sport-loop-featured': {
+        id: 'sport-loop-featured',
+        name: 'Sport Loop',
+        displayName: 'Sport Loop',
+        description: 'Hook-and-loop fastener',
+        category: 'accessories',
+        price: 4900,
+        image: 'images/products/band_sport_loop_trio_1769975915434.png',
+        colors: ['#4a4a4a', '#f0c929', '#6b2e6b'],
+        features: [],
+        link: 'accessories.html'
+    },
+    // Accessories - Chargers
+    'power-adapter-35w': {
+        id: 'power-adapter-35w',
+        name: '35W Dual USB-C Port Power Adapter',
+        displayName: 'Power Adapter',
+        description: 'Fast charging',
+        category: 'accessories',
+        price: 5900,
+        image: 'images/products/watch_charger_fast_1769975962427.png',
+        colors: ['#ffffff'],
+        features: [],
+        link: 'accessories.html'
+    },
+    'magnetic-charger': {
+        id: 'magnetic-charger',
+        name: 'Nexus Watch Magnetic Fast Charger',
+        displayName: 'Magnetic Charger',
+        description: 'USB-C cable',
+        category: 'accessories',
+        price: 2900,
+        image: 'images/products/watch_charger_fast_1769975962427.png',
+        colors: ['#ffffff'],
+        features: [],
+        link: 'accessories.html'
     }
 };
 
